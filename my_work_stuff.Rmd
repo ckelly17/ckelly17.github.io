@@ -5,35 +5,39 @@ output:
     toc: true
     toc_float: true
 ---
-Below are examples of my data analysis work from over the last year: 
+
+Here's a sample of some of my recent work. Let me know if you have any questions!
+
+<br>
 
 
-## Hanover Research
+## <span style="color: #484E66;"> Hanover Research </span>
 While I can't publish the products of my work at Hanover, here are a few examples of projects completed in the last year:
 
-* Equity Audit Dashboard for PGCPS
-* District performance benchmarking
-* Early warning system for Grade 9
+### <span style="color: #727478;"> Equity Audit Dashboard </span>
+### <span style="color: #727478;"> District Performance Benchmarking </span>
 
 
-## COVID-19
+
+## <span style="color: #484E66;"> COVID-19 </span>
 I've been focused on COVID-19 data since the beginning of the pandemic. My main project has been maintaining a dashboard that uses daily data from The COVID Tracking Project (public API) and the New York Times (GitHub repo). To date, it has been viewed over 150,000 times on my Tableau public page. <br> 
 
 Since June, I have been working as a volunteer with The COVID Tracking Project, focusing on data visualization and analysis. I have written blog posts analyzing hospitalizations, testing, and Long-Term Care (LTC) data, and I am the main analyst on the LTC data team. The LTC work has involved extracting and transforming data from the data collection team's Google Sheets using R and creating Tableau visuals which power the LTC page on The COVID Tracking Project website and [numerous analyses](https://covidtracking.com/blog/category/long-term-care) of the impact of COVID-19 on US long-term care facilities.
 
-### Visualization
+### <span style="color: #727478;"> Visualization </span>
+
 * COVID-19 Tableau [dashboard](https://public.tableau.com/profile/ckelly2528#!/vizhome/COVIDDashboard-Public/NationalOverview)
 
 * The COVID Tracking Project Long-Term Care [landing page](https://covidtracking.com/data/longtermcare)
 
 
-### Code
+### <span style="color: #727478;"> Code </span>
 * Data wrangling for COVID-19 dashboard ([GitHub](https://github.com/ckelly17/Coronavirus-Dashboard)) 
 * R scripts to support Long-Term Care projects and blog posts ([GitHub](https://github.com/ckelly17/Covid-Tracking-Project))
 * COVID-19 projections (Github and website)
 
 
-### Writing
+### <span style="color: #727478;"> Writing </span>
 *[To Understand the US Pandemic, We Need Hospitalization Data—and We Almost Have It](https://covidtracking.com/blog/hospitalization-data)*
 
 * Blog post written in June 2020 with Whet Moser covering the US states' patchwork approach to publishing data on COVID-19 hospitalizations. The post and one of my visualizations was cited in *The Atlantic*.
@@ -46,7 +50,7 @@ Since June, I have been working as a volunteer with The COVID Tracking Project, 
 
 * Blog post written in September 2020 with Whet Moser introducing The COVID Tracking Project's Long-Term Care dataset. Created visuals based off of the great data collection work of Artis Curiskis and Kara Oehler.
 
-## 2020 Election
+## <span style="color: #6D9890;"> 2020 Election </span>.
 ```{r , echo=FALSE}
 plot(pressure)
 ```
