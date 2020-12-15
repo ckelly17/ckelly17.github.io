@@ -1,0 +1,10 @@
+---
+title: "COVID-19 Dashboard"
+output:
+  html_document
+---
+
+This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests.
+
+<iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&:embed=true" scrolling="no"
+ width="1050" height="805"></iframe>

@@ -1,15 +1,26 @@
 ---
 title: "Dashboards"
 output:
-  html_document:
-    toc: true
-    toc_float: true
+  html_document
 ---
 
 I enjoy creating dashboards on topics that interest me. Most of them are hosted on my Tableau Public site, but you can find them below as well. Sometimes you'll find me putting them out on Twitter.
 
-<iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:language=en&:display_count=y&:origin=viz_share_link?showVizHome=no&:embed=true"
- width="645" height="955"></iframe>
+### COVID-19 Dashboard
+This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests. Click [here](ckelly17.github.io./covid_dashboard.html) to view the dashboard.
+
+
+### 2020 Election: Presidential Polling Averages
+
+
+### 2020 Election: Early Vote Tracker
+
+
+
+<iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&:embed=true" scrolling="no"
+ width="1050" height="805"></iframe>
+ 
+ https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&:embed=true
  
  https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:language=en&:display_count=y&:origin=viz_share_link
 
