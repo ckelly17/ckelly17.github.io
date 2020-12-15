@@ -5,10 +5,13 @@ navbar:
     - text: "home"
       href: index.html
     - text: "resume"
-      href: about.html
+      href: Resume.html
     - text: "my work"
-      href: my_work.html
+      href: my_work_stuff.html
+    - text: "dashboards"
+      href: dashboards.html
 
 output:
   html_document:
     theme: united
+output_dir: "."

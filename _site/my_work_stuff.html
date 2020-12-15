@@ -11,7 +11,7 @@
 
 
 
-<title>my work</title>
+<title>Examples of my work</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -260,6 +263,92 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -267,6 +356,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -307,26 +406,55 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">my work</h1>
+<h1 class="title toc-ignore">Examples of my work</h1>
 
 </div>
 
 
-<div id="tableau" class="section level2">
-<h2>Tableau</h2>
-<p>Check out the my Tableau public page <a href="https://public.tableau.com/profile/ckelly2528#!/">here</a></p>
-<p>Here’s a dashboard I made:</p>
-<iframe align = "center" width = "700" height = "500" src="https://public.tableau.com/profile/poldham#!/vizhome/MySecretPlanforWorldDomination/Historia1?publish=yes"/>
+<p>Below are examples of my data analysis work from over the last year:</p>
+<div id="hanover-research" class="section level2">
+<h2>Hanover Research</h2>
+<p>While I can’t publish the products of my work at Hanover, here are a few examples of projects completed in the last year:</p>
+<ul>
+<li>Equity Audit Dashboard for PGCPS</li>
+<li>District performance benchmarking</li>
+<li>Early warning system for Grade 9</li>
+</ul>
 </div>
-<div id="r" class="section level2">
-<h2>R</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="my_work_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<div id="covid-19" class="section level2">
+<h2>COVID-19</h2>
+<p><img src="my_work_stuff_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="r-code" class="section level3">
+<h3>R code</h3>
+</div>
+<div id="dashboard" class="section level3">
+<h3>Dashboard</h3>
+</div>
+<div id="articles-and-publications" class="section level3">
+<h3>Articles and publications</h3>
+</div>
+</div>
+<div id="election" class="section level2">
+<h2>2020 Election</h2>
+<p><img src="my_work_stuff_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="r-code-1" class="section level3">
+<h3>R code</h3>
+<p><img src="my_work_stuff_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="polling-dashboard" class="section level3">
+<h3>Polling Dashboard</h3>
+<p><img src="my_work_stuff_files/figure-html/unnamed-chunk-4-1.png" width="672" /> ### COVID Tracking Project <img src="my_work_stuff_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="polling-analysis" class="section level3">
+<h3>Polling Analysis</h3>
+<p><img src="my_work_stuff_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 

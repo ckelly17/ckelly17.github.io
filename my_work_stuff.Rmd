@@ -1,0 +1,54 @@
+---
+title: "Examples of my work"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+Below are examples of my data analysis work from over the last year: 
+
+
+## Hanover Research
+While I can't publish the products of my work at Hanover, here are a few examples of projects completed in the last year:
+
+* Equity Audit Dashboard for PGCPS
+* District performance benchmarking
+* Early warning system for Grade 9
+
+
+## COVID-19
+
+```{r , echo=FALSE}
+plot(pressure)
+```
+
+### R code
+### Dashboard
+### Articles and publications
+
+## 2020 Election
+```{r , echo=FALSE}
+plot(pressure)
+```
+
+### R code
+```{r , echo=FALSE}
+plot(pressure)
+```
+
+### Polling Dashboard
+
+
+
+```{r , echo=FALSE}
+plot(pressure)
+```
+### COVID Tracking Project
+```{r , echo=FALSE}
+plot(pressure)
+```
+
+### Polling Analysis
+```{r , echo=FALSE}
+plot(pressure)
+```

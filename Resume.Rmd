@@ -1,0 +1,74 @@
+---
+title: "Resume"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+&nbsp;
+
+### Education
+BA Political Science, University of Notre Dame
+
+MS Applied Economics, Johns Hopkins University
+
+&nbsp;
+
+### Experience
+#### Hanover Research
+##### Senior Director, Data Analytics
+* text
+* goes
+* here
+* and 
+* here
+* and 
+* here
+
+#### Content Director
+* text
+* goes
+* here
+* and 
+* here
+* and 
+* here
+
+#### Content Analyst
+* text
+* goes
+* here
+* and 
+* here
+* and 
+* here
+
+#### Research Associate
+* text
+* goes
+* here
+* and 
+* here
+* and 
+* here
+
+#### The COVID Tracking Project
+
+
+### Skills
+#### R
+* Proficient in core data manipulation tasks through a general `tidyverse` approach to data wrangling
+* Data visualization with `ggplot2`
+* Creating interactive reports (including this website) with `rmarkdown`
+
+
+#### Tableau
+#### STATA
+#### Other tools
+* Python
+* PowerBI
+* Git/GitHub
+* Excel
+
+
