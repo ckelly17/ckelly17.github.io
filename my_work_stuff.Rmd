@@ -17,6 +17,14 @@ While I can't publish the products of my work at Hanover, here are a few example
 
 
 ## COVID-19
+I've been focused on COVID-19 data since the beginning of the pandemic. 
+
+My main project has been maintaining a dashboard that uses daily data from The COVID Tracking Project (public API) and the New York Times (GitHub repo). To date, it has been viewed over 150,000 times on my Tableau public page.
+
+### Visualization
+### Code
+### Writing
+
 
 ```{r , echo=FALSE}
 plot(pressure)
