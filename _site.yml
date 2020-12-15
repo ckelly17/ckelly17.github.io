@@ -2,9 +2,9 @@ name: "personal-website-conor-kelly"
 navbar:
   title: "Conor Kelly"
   left:
-    - text: "Home"
+    - text: "home"
       href: index.html
-    - text: "About"
+    - text: "resume"
       href: about.html
     - text: "my work"
       href: my_work.html
