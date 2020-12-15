@@ -8,6 +8,11 @@ output:
 
 I enjoy creating dashboards on topics that interest me. Most of them are hosted on my Tableau Public site, but you can find them below as well. Sometimes you'll find me putting them out on Twitter.
 
+<iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:language=en&:display_count=y&:origin=viz_share_link?showVizHome=no&:embed=true"
+ width="645" height="955"></iframe>
+ 
+ https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:language=en&:display_count=y&:origin=viz_share_link
+
 
 ## COVID-19
 
