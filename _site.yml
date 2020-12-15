@@ -1,0 +1,14 @@
+name: "personal-website-conor-kelly"
+navbar:
+  title: "Conor Kelly"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "my work"
+      href: my_work.html
+
+output:
+  html_document:
+    theme: united

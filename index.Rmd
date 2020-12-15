@@ -1,0 +1,7 @@
+---
+title: "Hi!"
+---
+
+You've managed to stumble across my personal website!
+
+My name is Conor Kelly, and I am the director of data analytics at Hanover Research 

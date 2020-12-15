@@ -1,0 +1,25 @@
+---
+title: "my work"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tableau
+Check out the my Tableau public page [here](https://public.tableau.com/profile/ckelly2528#!/)
+
+Here's a dashboard I made:
+
+<iframe align = "center" width = "700" height = "500" src="https://public.tableau.com/profile/poldham#!/vizhome/MySecretPlanforWorldDomination/Historia1?publish=yes"/>
+
+
+## R
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
