@@ -4,7 +4,7 @@ output:
   html_document
 ---
 
-This dashboard uses data from [538](https://github.com/fivethirtyeight/data/tree/master/polls) to compare presidential polling averages at similar points in the 2016 and 2020 presidential elections. The main goal was visualizing measures other than the margin between candidates (e.g., Biden leads by 6 points) that are often overreported in the media. It is no longer being updated, but I may build something similar in the future.
+This dashboard uses data from [538](https://github.com/fivethirtyeight/data/tree/master/polls) to compare presidential polling averages at similar points in the 2016 and 2020 presidential elections. The main goal was visualizing measures other than the margin between candidates (e.g., Biden leads by 6 points) that are often overreported in the media. It is no longer being updated, but I may build something similar in the future. The code that builds the dataset that goes into Tableau can be found on [GitHub](https://github.com/ckelly17/2020-Polling-Averages).
 
 <iframe src="https://public.tableau.com/views/PollingAverages/MAIN?:showVizHome=no&:embed=true" align = "left" scrolling="no"
  width="1500" height="700"></iframe>
