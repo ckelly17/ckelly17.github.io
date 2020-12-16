@@ -4,7 +4,7 @@ output:
   html_document
 ---
 
-This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests.
+This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests. I will update it daily as long as The COVID Tracking Project continues to publish this critical data. The code that builds the dataset that goes into Tableau can be found on [GitHub](https://github.com/ckelly17/Coronavirus-Dashboard).
 
 <iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&:embed=true" scrolling="no"
  width="1050" height="805"></iframe>
