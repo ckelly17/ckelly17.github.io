@@ -2,7 +2,13 @@
 title: "Hello!"
 ---
 <br>
-*You've managed to stumble across my personal website! Check out the tabs along the top to see some of my work.*
+<center> *You've managed to stumble across my personal website! Check out the tabs along the top to see some of my work.* 
+
+<br>
+Contact me (Conor Kelly) at:
+</center>
+
+
 
 <br>
 

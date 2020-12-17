@@ -4,14 +4,34 @@ navbar:
   left:
     - text: "home"
       href: index.html
+    - text: "about"
+      href: about.html
     - text: "resume"
       href: Resume.html
     - text: "my work"
       href: my_work_stuff.html
     - text: "dashboards"
       href: dashboards.html
+      menu:
+        - text: "COVID-19"
+          href: covid_dashboard.html
+        - text: "Polling Averages"
+          href: polling.html
+        - text: "Early Vote Tracker"
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:name@rapidtables.com
+    - icon: fa-github fa-lg
+      href: https://github.com/ckelly17
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/CohoKelly
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/conor-kelly-a407874b/
+    
 
 output:
   html_document:
     theme: united
+    include:
+      after_body: footer2.html
 output_dir: "."
