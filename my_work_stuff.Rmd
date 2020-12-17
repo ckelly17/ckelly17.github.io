@@ -6,16 +6,21 @@ output:
     toc_float: true
 ---
 
-Here's a sample of some of my recent work. Let me know if you have any questions!
+Here's a sample of some of my recent work! While I can't link to the code or finished product for any of the projects in my job at Hanover (they are the property of our clients), I think they are pretty interesting and describe them below. I also highlight the code and dashboards for a couple projects (COVID-19 and 2020 elections) that I have pursued on my own time.
 
 <br>
 
 
-## <span style="color: #484E66;"> Hanover Research </span>
-While I can't publish the products of my work at Hanover, here are a few examples of projects completed in the last year:
+-------------------------------------------------
 
-### <span style="color: #727478;"> Equity Audit Dashboard </span>
-### <span style="color: #727478;"> District Performance Benchmarking </span>
+
+## <span style="color: #484E66;"> Equity Audit </span>
+Over the last year, I have developed a framework for a quantitative analysis of student outcomes in K-12 school districts through an equity lens. The dashboard displays a wide range of student outcomes (e.g., test scores, behavior, college readiness) and district inputs (e.g., program access, teacher quality) across a series of student groups, displaying representation indexes to standardize analysis. This product has been used by leaders in some of the country's largest school districts to examine equity within their schools and push a data-driven discussion of barriers to opportunity for all students. For a typical project, this involves collecting, wrangling, and combining up to 20 distinct files from student data systems, often involving millions of student records and thousands of lines of `R` code, before visualizing in Tableau. 
+
+<br>
+
+## <span style="color: #484E66;"> School District Performance Benchmarking</span>
+In early 2020, I created a tool for school districts to benchmark their performance against demographics-adjusted predictions, providing a significant improvement over typical accountability frameworks that emphasize absolute performance and reward districts that serve better-resourced populations. This tool produced district-level predictions for student performance across a range of outcomes that adjusted for the characteristics (e.g., income and education) of the communities that districts serve. The result is that district leaders can see where they are under- and over-performing expectations and adjust focus accordingly. The project involved collecting dozens of data files from state department of education databases, reshaping and combining to the district-level and fitting predictions using STATA, before visualizing in Tableau. 
 
 -------------------------------------------------
 
@@ -24,7 +29,7 @@ I've been focused on COVID-19 data since the beginning of the pandemic. My main 
 
 Since June, I have been working as a volunteer with The COVID Tracking Project, focusing on data visualization and analysis. I have written blog posts analyzing hospitalizations, testing, and Long-Term Care (LTC) data, and I am the main analyst on the LTC data team. The LTC work has involved extracting and transforming data from the data collection team's Google Sheets using R and creating Tableau visuals which power the LTC page on The COVID Tracking Project website and [numerous analyses](https://covidtracking.com/blog/category/long-term-care) of the impact of COVID-19 on US long-term care facilities.
 
-### <span style="color: #727478;"> Visualization </span>
+### <span style="color: #727478;"> Visualization </span> `r emo::ji("chart increasing")`
 
 * COVID-19 Tableau [dashboard](https://public.tableau.com/profile/ckelly2528#!/vizhome/COVIDDashboard-Public/NationalOverview)
 
@@ -37,7 +42,7 @@ Since June, I have been working as a volunteer with The COVID Tracking Project, 
 * COVID-19 projections ([notebook](projection.html))
 
 
-### <span style="color: #727478;"> Writing </span>
+### <span style="color: #727478;"> Writing </span> `r emo::ji("newspaper")`
 *[To Understand the US Pandemic, We Need Hospitalization Data—and We Almost Have It](https://covidtracking.com/blog/hospitalization-data)*
 
 * Blog post written in June 2020 with Whet Moser covering the US states' patchwork approach to publishing data on COVID-19 hospitalizations. The post and one of my visualizations was cited in *The Atlantic*.

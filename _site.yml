@@ -20,7 +20,7 @@ navbar:
         - text: "Early Vote Tracker"
   right:
     - icon: fa-envelope fa-lg
-      href: mailto:name@rapidtables.com
+      href: mailto:conor.richard.kelly@gmail.com
     - icon: fa-github fa-lg
       href: https://github.com/ckelly17
     - icon: fa-twitter fa-lg
