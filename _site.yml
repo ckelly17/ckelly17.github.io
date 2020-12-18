@@ -12,12 +12,7 @@ navbar:
       href: my_work_stuff.html
     - text: "dashboards"
       href: dashboards.html
-      menu:
-        - text: "COVID-19"
-          href: covid_dashboard.html
-        - text: "Polling Averages"
-          href: polling.html
-        - text: "Early Vote Tracker"
+
   right:
     - icon: fa-envelope fa-lg
       href: mailto:conor.richard.kelly@gmail.com
