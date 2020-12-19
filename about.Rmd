@@ -5,7 +5,9 @@ output: html_document
 
 
 <br>
-<img src="code.png" style="width:58%; solid; margin-right: 1px" align="right"> I am a data enthusiast and lover of stories and graphics. I work as the senior director of data analytics at Hanover Research. My main job is helping our clients, primarily K12 and Higher Education organizations and some private companies, use data more effectively. Think program evaluations, data visualization, and predictive analytics. I manage a team of talented analysts that is constantly working to deliver value to our clients. Previously, I served as a project and client manager in Hanover's K12 Education practice, where I managed research and analysis projects for over 50 clients, including state departments of education and some of the largest districts in the country.
+<img src="code2.png" style="width:50%; solid; margin-right: 1px" align="right"> I am a data enthusiast and lover of stories and graphics. I work as the senior director of data analytics at Hanover Research. My main job is helping our clients, primarily K12 and Higher Education organizations and some private companies, use data more effectively. Think program evaluations, data visualization, and predictive analytics. 
+
+I manage a team of talented analysts that is constantly working to deliver value to our clients. Previously, I served as a project and client manager in Hanover's K12 Education practice, where I managed research and analysis projects for over 50 clients, including state departments of education and some of the largest districts in the country.
 
 I enjoy managing teams, but I also like being close to the action; data analysis is a passion of mine, and it's not just something I do for work. In the last year, for example, I've volunteered with The COVID Tracking Project as a data analyst and have maintained a daily dashboard on COVID-19 data since May 2020. I work in R primarily, with a lot of visualization work done in Tableau. I also use STATA often when collaborating with team members, and I have some experience in Python.
 
