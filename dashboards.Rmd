@@ -12,9 +12,10 @@ I enjoy creating dashboards on topics that interest me. Most of them are hosted 
 
 ### COVID-19 Daily Statistics
 This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests. Click [here](covid_dashboard.html) to view the dashboard. 
+
 <br>
 <p><a href="covid_dashboard.html">
-<img src="covid_pic.png" width="250" height="300" id="hp" />
+<img src="covid_pic.png" width=40% id="hp" />
 </a></p>
 <br>
 
@@ -22,7 +23,7 @@ This dashboard uses data from the [New York Times](https://github.com/nytimes/co
 This dashboard used data from [FiveThirtyEight](https://github.com/fivethirtyeight/data/tree/master/polls) to compare presidential polling averages at similar points in the 2016 and 2020 presidential elections. Click [here](polling_dashboard.html) to view the dashboard.
 <br>
 <p><a href="polling_dashboard.html">
-<img src="polling_pic.png" width="275" height="300" id="hp" />
+<img src="polling_pic.png" width=40% id="hp" />
 </a></p>
 <br>
 
@@ -30,7 +31,7 @@ This dashboard used data from [FiveThirtyEight](https://github.com/fivethirtyeig
 This dashboard used data from Michael McDonald and the [U.S. Elections Project](https://electproject.github.io/Early-Vote-2020G/index.html), tracking vote-by-mail and early voting trends in the 2020 general election. Michael's site only provided a snapshot of early voting trends, so I cached the daily data to show trends over the course of the full run-up to the election. Click [here](https://public.tableau.com/profile/ckelly2528#!/vizhome/VotebyMailTracker/Dashboard1) to view the dashboard.
 <br>
 <p><a href="polling_dashboard.html">
-<img src="early_vote_pic.png" width="275" height="300" id="hp" />
+<img src="early_vote_pic.png" width=40% id="hp" />
 </a></p>
 <br>
 
