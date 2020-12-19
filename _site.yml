@@ -6,21 +6,21 @@ navbar:
       href: index.html
     - text: "about"
       href: about.html
-    - text: "resume"
-      href: Resume.html
     - text: "my work"
       href: my_work_stuff.html
     - text: "dashboards"
       href: dashboards.html
+    - text: "resume"
+      href: Resume.html
 
   right:
-    - icon: fa-envelope fa-lg
+    - icon: fa-envelope
       href: mailto:conor.richard.kelly@gmail.com
-    - icon: fa-github fa-lg
+    - icon: ion-social-github fa-lg
       href: https://github.com/ckelly17
-    - icon: fa-twitter fa-lg
+    - icon: ion-social-twitter ion-lg
       href: https://twitter.com/CohoKelly
-    - icon: fa-linkedin fa-lg
+    - icon: ion-social-linkedin fa-lg
       href: https://www.linkedin.com/in/conor-kelly-a407874b/
     
 
@@ -30,3 +30,4 @@ output:
     include:
       after_body: footer2.html
 output_dir: "."
+self_contained: true
