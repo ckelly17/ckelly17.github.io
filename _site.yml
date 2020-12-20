@@ -11,7 +11,7 @@ navbar:
     - text: "dashboards"
       href: dashboards.html
     - text: "resume"
-      href: Conor Kelly_Resume_2018.pdf
+      href: resume2.html
 
   right:
     - icon: fa-envelope

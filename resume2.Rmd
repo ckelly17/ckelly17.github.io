@@ -1,0 +1,131 @@
+---
+title: "Conor's resume"
+author: Conor Kelly
+output: pagedown::html_resume
+---
+
+
+Aside
+====================================
+
+
+Contact
+------------------------------------
+
+<p style="font-size:12px">`r fontawesome::fa("envelope", fill = "black")` conor.richard.kelly@gmail.com </p>
+<p style="font-size:12px">`r fontawesome::fa("phone", fill = "black")` 207-766-8390</p>
+<p style="font-size:12px">`r fontawesome::fa("home", fill = "black")` Boston, MA</p>
+
+
+Skills
+------------------------------------
+
+
+#### Programming Languages and Software
+<p style="font-size:10px">**R**: My main data analysis tool, with experience in intensive data wrangling (`tidyverse`), exploratory data analysis (`ggplot2`), and regression and machine learning (`tidymodels`, `caret`)
+<br> </p>
+<p style="font-size:10px">**Stata**: Data wrangling and regression analysis 
+<br> </p>
+
+<p style="font-size:10px">**Tableau**: Data visualization and dashboard creation. Experienced designing dashboards for public use and organizational decision-makers <br> </p>
+
+<p style="font-size:10px">**Python**: Developed experience with `keras` and `tensorflow` machine learning libraries during graduate school, along with `numpy` and `pandas` for data wrangling </p>
+
+<p style="font-size:10px">**Other Software Tools**: Git/GitHub/GitLab, Excel, Qualtrics </p>
+
+#### Skills and Experience
+<p style="font-size:10px">
+Client management/relationship development; training development and faciliation; survey design and analysis; proficient in Spanish  </p>
+
+#### Coursework
+<p style="font-size:10px">Econometrics, microeconometrics, machine learning, survey research
+methods, quantitative political analysis </p>
+
+
+
+
+Main
+====================================
+
+Conor Kelly {#title}
+------------------------------------
+
+Data scientist and team leader. Demonstrated track record of excellence, innovation, and learning/adapting to new tools. Particular expertise in K12 education data and the mess of real-world datasets.
+
+Education {data-icon=graduation-cap}
+------------------------------------
+
+### University of Notre Dame
+
+B.A. Political Science (2014)
+
+Notre Dame, IN
+
+### Johns Hopkins University
+
+M.S. Applied Economics (2019)
+
+Washington, DC
+
+
+Experience {data-icon=briefcase}
+------------------------------------
+
+### Hanover Research
+
+Senior Director, Data Analytics
+
+Remote
+
+2019 - present
+
+- Manage team of 10 data scientists responsible for completing all data analytics projects on behalf of Hanover's clients in K-12 education, higher education, and enterprise.
+- Instituted new team-wide practices and protocols including version control (GitLab), reproducible code and analysis templates.
+- Reduced timelines and resource investment for client projects.
+
+
+### Hanover Research
+
+Content Director
+
+Arlington, VA
+
+2015 - 2019
+
+- Managed research projects and consulting engagements for over 50 education-sector clients. Collaborated with superintendents, heads of school, and directors of research and evaluation to plan and execute research agendas.
+- Developed internal tools and analysis templates outside of scope of main role.
+
+### Hanover Research
+
+Content Analyst
+
+Arlington, VA
+
+2015 - 2015
+
+- Served as project lead and editor for other analysts in addition to own research work and responsibilities.
+
+### Hanover Research
+
+Research Associate
+
+Arlington, VA
+
+2014 - 2015
+
+- Authored research reports for K-12 and higher education clients.
+
+Volunteer Work {data-icon=handshake}
+------------------------------------
+
+### The COVID Tracking Project
+
+Data Analyst and Journalist
+
+Remote
+
+2020
+
+- Maintain daily dashboard of COVID-19 data in the U.S.
+- Facilitate data ingestion and presentation for the Long-Term Care data tracker.
+
