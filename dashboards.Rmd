@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-I enjoy creating dashboards on topics that interest me. Most of them are hosted on my Tableau Public site, but you can find them below as well. Sometimes you'll find me putting them out on Twitter.
+I enjoy creating dashboards on topics that interest me. Most of them are hosted on my [Tableau Public site](https://public.tableau.com/profile/ckelly2528#!/), but you can find them below as well. Sometimes you'll find me highlighting them on Twitter.
 
 
 ### COVID-19 Daily Statistics

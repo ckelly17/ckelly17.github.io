@@ -28,7 +28,7 @@ In early 2020, I created a tool for school districts to benchmark their performa
 
 ## <span style="color: #484E66;"> COVID-19 </span>
 <img src="covid_pic.png" style="width:40%; solid; margin-right: 20px" align="right">
-I've been focused on COVID-19 data since the beginning of the pandemic. My main project has been maintaining a dashboard that uses daily data from The COVID Tracking Project (public API) and the New York Times (GitHub repo). To date, it has been viewed over 150,000 times on my Tableau public page. <br> 
+I've been focused on COVID-19 data since the beginning of the pandemic. My main project has been maintaining a dashboard that uses daily data from The COVID Tracking Project (public API) and the New York Times (GitHub repo), with over 50 visualizations. To date, it has been viewed over 150,000 times on my Tableau public page. <br> 
 
 Since June, I have been working as a volunteer with The COVID Tracking Project, focusing on data visualization and analysis. I have written blog posts analyzing hospitalizations, testing, and Long-Term Care (LTC) data, and I am the main analyst on the LTC data team. The LTC work has involved extracting and transforming data from the data collection team's Google Sheets using R and creating Tableau visuals which power the LTC page on The COVID Tracking Project website and [numerous analyses](https://covidtracking.com/blog/category/long-term-care) of the impact of COVID-19 on US long-term care facilities.
 
