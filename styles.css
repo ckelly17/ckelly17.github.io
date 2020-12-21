@@ -30,5 +30,14 @@ img-circle {
     border-radius: 50%;
 }
 
+/* change color of hyperlinks in the text*/
 
+a {
+  color: midnightblue;
+}
+
+a:hover {
+ color: midnightblue; /* darker color when hovering */
+ font-weight: bold;
+}
 

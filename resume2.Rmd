@@ -2,7 +2,12 @@
 title: "Conor's resume"
 author: Conor Kelly
 output: pagedown::html_resume
+
 ---
+```{r, echo=FALSE}
+pagedown::chrome_print("resume2.html")
+```
+
 
 
 Aside
@@ -13,7 +18,9 @@ Contact
 ------------------------------------
 
 <p style="font-size:12px">`r fontawesome::fa("envelope", fill = "black")` conor.richard.kelly@gmail.com </p>
+
 <p style="font-size:12px">`r fontawesome::fa("phone", fill = "black")` 207-766-8390</p>
+
 <p style="font-size:12px">`r fontawesome::fa("home", fill = "black")` Boston, MA</p>
 
 

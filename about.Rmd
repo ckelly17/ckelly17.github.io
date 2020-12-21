@@ -6,7 +6,7 @@ output: html_document
 
 
 <br>
-<img style="float: right; padding-left: 10px; width:50%" src="code2.png"/>I am a data enthusiast and lover of stories and graphics. I work as the senior director of data analytics at [Hanover Research](https://www.hanoverresearch.com/). My main job is helping our clients, primarily K12 and Higher Education organizations and some private companies, use data more effectively. Think program evaluations, data visualization, and predictive analytics. 
+<img style="float: right; padding-left: 10px; width:64%" src="code2.png"/>I am a data enthusiast and lover of stories and graphics. I work as the senior director of data analytics at [Hanover Research](https://www.hanoverresearch.com/). My main job is helping our clients, primarily K12 and Higher Education organizations and some private companies, use data more effectively. Think program evaluations, data visualization, and predictive analytics. 
 
 I manage a team of talented analysts that is constantly working to deliver value to our clients. Previously, I served as a project and client manager in Hanover's [K12 Education practice](https://www.hanoverresearch.com/k-12-education/), where I managed research and analysis projects for over 50 clients, including state departments of education and some of the largest districts in the country.
 

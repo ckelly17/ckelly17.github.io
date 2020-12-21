@@ -26,8 +26,9 @@ navbar:
 
 output:
   html_document:
-    theme: united
+    theme: sandstone
     include:
       after_body: footer2.html
+    css: [styles.css]
 output_dir: "."
 self_contained: true
