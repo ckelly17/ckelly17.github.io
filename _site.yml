@@ -23,7 +23,6 @@ navbar:
     - icon: ion-social-linkedin fa-lg
       href: https://www.linkedin.com/in/conor-kelly-a407874b/
     
-
 output:
   html_document:
     theme: sandstone
