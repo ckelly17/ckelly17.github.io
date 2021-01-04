@@ -39,8 +39,8 @@ Since June, I have been working as a volunteer with The COVID Tracking Project, 
 * The COVID Tracking Project Long-Term Care [landing page](https://covidtracking.com/data/longtermcare)
 
 
-### <span style="color: #727478;"> Code </span> `r fontawesome::fa("r-project", fill = "steelblue")`
-* Data wrangling for COVID-19 dashboard ([GitHub](https://github.com/ckelly17/Coronavirus-Dashboard)) 
+### <span style="color: #727478;"> Code </span> `r fontawesome::fa("r-project", fill = "steelblue")` `r fontawesome::fa("python", fill = "gray")`
+* Data wrangling in Python and R for COVID-19 dashboard ([GitHub](https://github.com/ckelly17/Coronavirus-Dashboard)) 
 * R scripts to support Long-Term Care projects and blog posts ([GitHub](https://github.com/ckelly17/Covid-Tracking-Project))
 * COVID-19 projections ([notebook](projection.html))
 
