@@ -28,6 +28,25 @@ This dashboard uses data from the [New York Times](https://github.com/nytimes/co
 <br>
 <br>
 
+### COVID-19 Vaccine Distribution
+This dashboard presents data from the [CDC]() on vaccine distribution and administration in the United States, with the aim of tracking the US' ramp-up of vaccination capacity.Click [here](vaccine_dashboard.html) to view the dashboard. 
+
+<p><a href="vaccine_dashboard.html">
+<img src="vaccine_homepage.png" width=40% align="left" id="hp" />
+</a></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### 2020 Election: Presidential Polling Averages
 This dashboard used data from [FiveThirtyEight](https://github.com/fivethirtyeight/data/tree/master/polls) to compare presidential polling averages at similar points in the 2016 and 2020 presidential elections. Click [here](polling_dashboard.html) to view the dashboard.
 <br>

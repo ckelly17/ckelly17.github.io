@@ -1,0 +1,11 @@
+---
+title: "Vaccine Distribution"
+output:
+  html_document
+---
+
+This dashboard presents data from the [CDC]() on vaccine distribution and administration in the United States, with the aim of tracking the US' ramp-up of vaccination capacity. Code can be found on [GitHub](https://github.com/ckelly17/Vaccine-Tracker).
+
+<iframe src="https://public.tableau.com/views/COVID-19VaccineDistribution/0_MAIN?" align = "left" scrolling="no"
+ width="805" height="700"></iframe>
+ 
