@@ -36,7 +36,7 @@ Skills
 
 <p style="font-size:10px">**Tableau**: Data visualization and dashboard creation. Experienced designing dashboards for public use and organizational decision-makers <br> </p>
 
-<p style="font-size:10px">**Python**: Developed experience with `keras` and `tensorflow` machine learning libraries during graduate school, along with `numpy` and `pandas` for data wrangling </p>
+<p style="font-size:10px">**Python**: Experience with `scikit-learn` and `tensorflow` machine learning libraries, along with `numpy` and `pandas` for data wrangling </p>
 
 <p style="font-size:10px">**Other Software Tools**: Git/GitHub/GitLab, Excel, Qualtrics </p>
 
