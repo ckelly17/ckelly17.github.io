@@ -23,6 +23,8 @@ Contact
 
 <p style="font-size:12px">`r fontawesome::fa("home", fill = "black")` Boston, MA</p>
 
+<p style="font-size:12px">`r fontawesome::fa("globe", fill = "black")` [ckelly17.github.io](ckelly17.github.io)</p>
+
 
 Skills
 ------------------------------------
