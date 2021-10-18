@@ -81,14 +81,24 @@ Experience {data-icon=briefcase}
 ------------------------------------
 
 ### Hanover Research
+Data Scientist
+
+Remote
+
+2021 - present
+
+- Develop data pipelines (Databricks, Spark, Python) to support analytics projects for federal agency
+- Serve as deputy lead of data engineering team
+
+### Hanover Research
 
 Senior Director, Data Analytics
 
 Remote
 
-2019 - present
+2019 - 2021
 
-- Manage team of 10 data scientists responsible for completing all data analytics projects on behalf of Hanover's clients in K-12 education, higher education, and enterprise.
+- Managed team of 10 data scientists responsible for completing all data analytics projects on behalf of Hanover's clients in K-12 education, higher education, and enterprise.
 - Instituted new team-wide practices and protocols including version control (GitLab), reproducible code and analysis templates.
 - Reduced timelines and resource investment for client projects.
 
@@ -102,7 +112,6 @@ Arlington, VA
 2015 - 2019
 
 - Managed research projects and consulting engagements for over 50 education-sector clients. Collaborated with superintendents, heads of school, and directors of research and evaluation to plan and execute research agendas.
-- Developed internal tools and analysis templates outside of scope of main role.
 
 ### Hanover Research
 
