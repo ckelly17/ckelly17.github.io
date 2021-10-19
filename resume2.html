@@ -1,347 +1,27 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html>
+    <meta name="author" content="Conor Kelly" />
+    
+    <title>Conor’s resume</title>
 
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-<meta name="author" content="Conor Kelly" />
-
-
-<title>Conor’s resume</title>
-
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-
-<link rel="stylesheet" href="styles.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 61px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h2 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h3 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h4 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h5 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h6 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Conor Kelly</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">home</a>
-</li>
-<li>
-  <a href="about.html">about</a>
-</li>
-<li>
-  <a href="my_work_stuff.html">my work</a>
-</li>
-<li>
-  <a href="dashboards.html">dashboards</a>
-</li>
-<li>
-  <a href="resume2.html">resume</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="mailto:conor.richard.kelly@gmail.com">
-    <span class="fas fa-envelope"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://github.com/ckelly17">
-    <span class="ion ion-social-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://twitter.com/CohoKelly">
-    <span class="ion ion-social-twitter ion-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.linkedin.com/in/conor-kelly-a407874b/">
-    <span class="ion ion-social-linkedin fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Conor’s resume</h1>
-<h4 class="author">Conor Kelly</h4>
-
-</div>
-
+    
+        <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+        <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+        <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+        <link href="site_libs/paged-0.13/css/resume.css" rel="stylesheet" />
+        <script src="site_libs/paged-0.13/js/config.js"></script>
+        <script src="site_libs/paged-0.13/js/paged.js"></script>
+        <script src="site_libs/paged-0.13/js/hooks.js"></script>
+    
+    
+  </head>
+  <body>
 
 <div id="aside" class="section level1">
 <h1>Aside</h1>
@@ -377,10 +57,12 @@ Boston, MA
 <div id="programming-languages-and-software" class="section level4">
 <h4>Programming Languages and Software</h4>
 <p style="font-size:10px">
-<strong>R</strong>: My main data analysis tool, with experience in intensive data wrangling (<code>tidyverse</code>), exploratory data analysis (<code>ggplot2</code>), and regression and machine learning (<code>tidymodels</code>, <code>caret</code>) <br>
+<strong>R</strong>: My main data analysis tool, with experience in intensive data wrangling (<code>tidyverse</code>), exploratory data analysis (<code>ggplot2</code>), and regression and machine learning (<code>tidymodels</code>, <code>caret</code>)
+<br>
 </p>
 <p style="font-size:10px">
-<strong>Stata</strong>: Data wrangling and regression analysis <br>
+<strong>Stata</strong>: Data wrangling and regression analysis
+<br>
 </p>
 <p style="font-size:10px">
 <strong>Tableau</strong>: Data visualization and dashboard creation. Experienced designing dashboards for public use and organizational decision-makers <br>
@@ -401,7 +83,8 @@ Client management/relationship development; training development and faciliation
 <div id="coursework" class="section level4">
 <h4>Coursework</h4>
 <p style="font-size:10px">
-Econometrics, microeconometrics, machine learning, survey research methods, quantitative political analysis
+Econometrics, microeconometrics, machine learning, survey research
+methods, quantitative political analysis
 </p>
 </div>
 </div>
@@ -413,7 +96,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 <p>Data scientist and team leader. Demonstrated track record of excellence, innovation, and learning/adapting to new tools. Particular expertise in K12 education data and the mess of real-world datasets.</p>
 </div>
 <div id="education" class="section level2" data-icon="graduation-cap">
-<h2 data-icon="graduation-cap">Education</h2>
+<h2>Education</h2>
 <div id="university-of-notre-dame" class="section level3">
 <h3>University of Notre Dame</h3>
 <p>B.A. Political Science (2014)</p>
@@ -426,9 +109,9 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 </div>
 </div>
 <div id="experience" class="section level2" data-icon="briefcase">
-<h2 data-icon="briefcase">Experience</h2>
-<div id="hanover-research" class="section level3">
-<h3>Hanover Research</h3>
+<h2>Experience</h2>
+<div id="deloitte" class="section level3">
+<h3>Deloitte</h3>
 <p>Data Scientist</p>
 <p>Remote</p>
 <p>2021 - present</p>
@@ -437,7 +120,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 <li>Serve as deputy lead of data engineering team</li>
 </ul>
 </div>
-<div id="hanover-research-1" class="section level3">
+<div id="hanover-research" class="section level3">
 <h3>Hanover Research</h3>
 <p>Senior Director, Data Analytics</p>
 <p>Remote</p>
@@ -448,7 +131,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 <li>Reduced timelines and resource investment for client projects.</li>
 </ul>
 </div>
-<div id="hanover-research-2" class="section level3">
+<div id="hanover-research-1" class="section level3">
 <h3>Hanover Research</h3>
 <p>Content Director</p>
 <p>Arlington, VA</p>
@@ -457,7 +140,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 <li>Managed research projects and consulting engagements for over 50 education-sector clients. Collaborated with superintendents, heads of school, and directors of research and evaluation to plan and execute research agendas.</li>
 </ul>
 </div>
-<div id="hanover-research-3" class="section level3">
+<div id="hanover-research-2" class="section level3">
 <h3>Hanover Research</h3>
 <p>Content Analyst</p>
 <p>Arlington, VA</p>
@@ -466,7 +149,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 <li>Served as project lead and editor for other analysts in addition to own research work and responsibilities.</li>
 </ul>
 </div>
-<div id="hanover-research-4" class="section level3">
+<div id="hanover-research-3" class="section level3">
 <h3>Hanover Research</h3>
 <p>Research Associate</p>
 <p>Arlington, VA</p>
@@ -477,7 +160,7 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 </div>
 </div>
 <div id="volunteer-work" class="section level2" data-icon="handshake">
-<h2 data-icon="handshake">Volunteer Work</h2>
+<h2>Volunteer Work</h2>
 <div id="the-covid-tracking-project" class="section level3">
 <h3>The COVID Tracking Project</h3>
 <p>Data Analyst and Journalist</p>
@@ -491,61 +174,84 @@ Econometrics, microeconometrics, machine learning, survey research methods, quan
 </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<p> 
-
- <font size="2"> <center> This website was created using <a href="https://rmarkdown.rstudio.com/">R Markdown.</a> </center> </font>
-</p>
-
-
-
-
-</div>
-
 <script>
+(function() {
+  var i, s, j, el, els;
+  var create_el = function(type, className, content, isHTML) {
+    var el = document.createElement(type);
+    if (className) el.className = className;
+    if (content) {
+      if (isHTML) {el.innerHTML = content;} else {el.innerText = content;}
+    }
+    return el;
+  }
 
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
+  // replace h2 title with h1
+  var title = document.getElementById('title').querySelector('h2');
+  title.parentNode.replaceChild(create_el('h1', false, title.innerHTML, true), title);
 
+  // add the class .aside to #aside
+  el = document.getElementById('aside');
+  if (el) el.className += ' aside';
 
+  // tweak class names of sections, and add icons
+  els = document.getElementById('main').querySelectorAll('.level2');
+  for (i = 0; i < els.length; i++) {
+    el = els[i];
+    if (i === 0 && el.id === 'title') continue;
+    el.className += ' main-block';
+    if (el.dataset['concise']) el.className += ' concise';
+    // if there is no icon, add an icon:
+    if (el.firstElementChild.firstChild && el.firstElementChild.firstChild.nodeName !== 'I') {
+      s = el.dataset['icon'] || 'bookmark';
+      el.firstElementChild.insertBefore(create_el('i', 'fa fa-' + s), el.firstElementChild.firstChild);
+    }
+  }
+
+  // tweak class names of blocks in sections
+  els = document.getElementById('main').querySelectorAll('.level3');
+  for (i = 0; i < els.length; i++) {
+    el = els[i];
+    if (el.parentNode.id === 'title') continue;
+    el.className += ' blocks';
+    el.innerHTML = '<div class="date"></div>' + '<div class="decorator"></div>' +
+      '<div class="details"><header></header><div></div></div>' + el.innerHTML;
+    var ps = el.querySelectorAll('p');
+    // move the date paragraph to the date div
+    if (ps.length >= 3) {
+      s = ps[2].innerText;
+      s = s === 'N/A' ? [] : s.split(' - ');
+      el.removeChild(ps[2]);
+      for (j = 0; j < s.length && j < 2; j++) {
+        el.children[0].appendChild(create_el('span', false, s[j]))
+      }
+    }
+    // move title, description, location to the details div
+    (function(h) {
+      h.appendChild(el.children[3]);
+      var p = el.children[3];  // description
+      if (p.innerText !== 'N/A') {
+        h.appendChild(create_el('span', 'place', p.innerHTML, true));
+      }
+      el.removeChild(p);
+      p = el.children[3];  // location
+      if (p.innerText !== 'N/A') {
+        s = create_el('span', 'location', p.innerHTML, true);
+        s.innerHTML = '<i class="fa fa-map-marker-alt"></i> ' + s.innerHTML;
+        h.appendChild(s);
+      }
+      el.removeChild(p);
+    })(el.children[2].firstElementChild);
+    // move the rest of content in a block into the last div of the details div
+    s = el.children[2];
+    while (j = s.nextSibling) {
+      if (j.className === 'aside') { s = j; continue; }
+      el.children[2].lastElementChild.append(j);
+    }
+  }
+})();
 </script>
 
-<!-- tabsets -->
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
-</body>
+  </body>
 </html>

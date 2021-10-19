@@ -80,7 +80,7 @@ Washington, DC
 Experience {data-icon=briefcase}
 ------------------------------------
 
-### Hanover Research
+### Deloitte
 Data Scientist
 
 Remote
