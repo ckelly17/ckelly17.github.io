@@ -33,12 +33,21 @@ ggplotly(sa_deaths_plot)
 ggplotly(sa_deaths_log)
 ```
 
-### Case Fatality Rates ###
+### Measures of Severity ###
 
-These charts display the 7-day average for deaths divided by the 7-day average for cases over time. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave).
+#### Percentage of peak values
+
+This charts display the 7-day average for deaths (black) and cases (red) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_pk_plot)
+```
+
+#### Case fatality rate
+This chart displays the 7-day average for deaths (lagged 17 days) divided by the 7-day average for cases. The lag reflects the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). The chart includes a `loess` smoothing. 
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(cfr_plot)
 ```
 
