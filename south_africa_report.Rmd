@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-Data provided by [Our World in Data](https://ourworldindata.org/) via [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data). Original source data is from the [South Africa Department of Health](https://sacoronavirus.co.za/), through [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19).
+Data provided by [Our World in Data](https://ourworldindata.org/) via [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data). Original source data is from the [South Africa Department of Health](https://sacoronavirus.co.za/), through [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19). I display data since the beginning of 2021.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("/Users/conorkelly/Documents/COVID/south africa.R")
