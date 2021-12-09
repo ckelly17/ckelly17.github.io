@@ -11,7 +11,7 @@ Data provided by [Our World in Data](https://ourworldindata.org/) via [GitHub](h
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("/Users/conorkelly/Documents/COVID/south africa.R")
 ```
-### Cases ###
+## Cases
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(sa_case_plot)
@@ -26,24 +26,23 @@ Lines show weekly growth rate of seven-day average. Dots show daily values compa
 ggplotly(sa_ratio_plot)
 ```
 
-### Deaths ###
+## Deaths
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(sa_deaths_plot)
 ggplotly(sa_deaths_log)
 ```
 
-### Measures of Severity ###
+## Measures of Severity
 
-#### Percentage of peak values
-
+**Percentage of peak values**
 This charts display the 7-day average for deaths (black) and cases (red) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_pk_plot)
 ```
 
-#### Case fatality rate
+**Case fatality rate**
 This chart displays the 7-day average for deaths (lagged 17 days) divided by the 7-day average for cases. The lag reflects the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). The chart includes a `loess` smoothing. 
 
 
@@ -51,14 +50,14 @@ This chart displays the 7-day average for deaths (lagged 17 days) divided by the
 ggplotly(cfr_plot)
 ```
 
-### Test Positivity ###
+## Test Positivity 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pos_rate_plot)
 
 ```
 
-#### Data Table (JHU)
+## Data Table (JHU)
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
 library(lubridate)
