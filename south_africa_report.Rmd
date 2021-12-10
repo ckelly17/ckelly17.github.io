@@ -36,10 +36,11 @@ ggplotly(sa_deaths_log)
 ## Measures of Severity
 
 **Percentage of peak values**
-This charts display the 7-day average for deaths (black) and cases (red) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
+This charts display the 7-day average for deaths (black) and cases (orange) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(pct_pk_plot)
+ggplotly(pct_pk_plot) %>%
+  layout(legend = list(orientation = "h", x =0.25, y = .97))
 ```
 
 **Case fatality rate**
