@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-Data provided by [Our World in Data](https://ourworldindata.org/) via [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data). Original source data is from the [South Africa Department of Health](https://sacoronavirus.co.za/), through [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19). I display data since the beginning of 2021.
+Data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). I display data since the beginning of 2021.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("/Users/conorkelly/Documents/COVID/south africa.R")
@@ -19,7 +19,7 @@ ggplotly(sa_ratio_log)
 
 ```
 
-Lines show weekly growth rate of seven-day average. Dots show daily values compared to seven days earlier. Values over 1 indicate case growth, while values under 1 mean case decline.
+The line chart below shows the weekly growth multiplier of seven-day average cases. Values over 100% indicate case growth, while values under 100% mean case decline. For example, a 200% growth multiplier would mean cases are twice as high as the week before (rising); 50% would mean that they are only half as high (falling). Dots show daily values compared to seven days earlier. 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -56,6 +56,20 @@ ggplotly(cfr_plot)
 ggplotly(pos_rate_plot)
 
 ```
+## Hospitals
+Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub]('https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv'). Presented first for South Africa as a whole and then for Gauteng Province specifically.
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplotly(sa_hosp)
+```
+
+**Gauteng Province**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplotly(gt_hosp)
+```
+
 
 ## Data Table (JHU)
 
