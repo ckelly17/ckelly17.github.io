@@ -8,6 +8,8 @@ output:
 
 Data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). I display data since the beginning of 2021.
 
+My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). Many thanks to all who have made this data available, particularly the [Data Science for Social Impact Research Group @ University of Pretoria](https://github.com/dsfsi)for hospitalization data.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("/Users/conorkelly/Documents/COVID/south africa.R")
 ```
