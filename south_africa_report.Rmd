@@ -57,7 +57,7 @@ ggplotly(pos_rate_plot)
 
 ```
 ## Hospitals
-Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub]('https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv'). Presented first for South Africa as a whole and then for Gauteng Province specifically.
+Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv). Presented first for South Africa as a whole and then for Gauteng Province specifically.
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
