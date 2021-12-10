@@ -1,5 +1,5 @@
 ---
-title: "South Africa COVID Update"
+title: "South Africa COVID-19 Analysis"
 output: 
   html_document:
     toc: true
