@@ -6,9 +6,9 @@ output:
     toc_float: true
 ---
 
-Data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). I display data since the beginning of 2021.
+Cases, deaths, and testing data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). Hospitalization data from the Data Science for Social Impact Research Group @ University of Pretoria, *Coronavirus COVID-19 (2019-nCoV) Data Repository for South Africa*. Available on: https://github.com/dsfsi/covid19za.
 
-My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). Many thanks to all who have made this data available, particularly the [Data Science for Social Impact Research Group @ University of Pretoria](https://github.com/dsfsi)for hospitalization data.
+I display data since the beginning of 2021. My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). Many thanks to all who have made this data available.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("/Users/conorkelly/Documents/COVID/south africa.R")
@@ -34,8 +34,6 @@ ggplotly(sa_ratio_plot)
 ggplotly(sa_deaths_plot)
 ggplotly(sa_deaths_log)
 ```
-
-## Measures of Severity
 
 **Percentage of peak values**
 This charts display the 7-day average for deaths (black) and cases (orange) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
@@ -74,7 +72,7 @@ ggplotly(gt_hosp)
 ```
 
 **Percentage of Peak Values** 
-Case and hospitalization metrics (seven-day averages) over time as percentage of peak values. No lags are applied. The orange area chart shows the progression of cases over time, while the lines show hospitalization metrics.
+Case and hospitalization metrics (seven-day averages) over time as percentage of peak values. No lags are applied. The gray area chart shows the progression of cases over time, while the lines show hospitalization metrics.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_hosp_plot) %>%
