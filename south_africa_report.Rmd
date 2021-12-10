@@ -71,14 +71,13 @@ ggplotly(gt_hosp)
 ```
 
 **Percentage of Peak Values** 
-Case and hospitalization metrics (seven-day averages) over time as percentage of peak values. No lags are applied.
+Case and hospitalization metrics (seven-day averages) over time as percentage of peak values. No lags are applied. The orange area chart shows the progression of cases over time, while the lines show hospitalization metrics.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_hosp_plot) %>%
-  layout(legend = list(orientation = "h", x =0, y = 1.05))
+  layout(legend = list(orientation = "h", x =0.15, y = 1.05))
 
 ggplotly(icu_pct_plot) %>%
-  #layout(legend = list(orientation = "h", x =.33, y = .98))
   layout(legend = list(orientation = "h", x =.62, y = .92))
 ```
 
