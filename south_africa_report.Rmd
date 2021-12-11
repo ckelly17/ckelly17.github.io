@@ -30,7 +30,7 @@ ggplotly(sa_ratio_log) %>%
     title = paste(
       '<b>COVID-19 Cases in South Africa (Log Scale)</b>',
       '<br><span style="font-size: 12px;">',
-      'Daily total and 7-day average'
+      'New cases 7-day average on a logarithmic scale'
     ),
     margin = list(t = 100)
   )
@@ -69,7 +69,7 @@ ggplotly(sa_deaths_log) %>%
     title = paste(
       '<b>Reported COVID-19 Deaths in South Africa (Log Scale)</b>',
       '<br><span style="font-size: 12px;">',
-      'Daily total and 7-day average'
+      'New deaths 7-day average on a logarithmic scale'
     ),
     margin = list(t = 100)
   )
