@@ -46,7 +46,7 @@ ggplotly(sa_ratio_plot) %>%
     title = paste(
       '<b>Week-Over-Week Case Growth Multiplier</b>',
       '<br><span style="font-size: 12px;">',
-      'Change in 7-day average cases compared to prior week'
+      'Change in 7-day average cases compared to prior week. Y-axis scale is logarithmic.'
     ),
     margin = list(t = 100)
   )
