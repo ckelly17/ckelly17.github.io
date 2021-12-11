@@ -16,8 +16,24 @@ source("/Users/conorkelly/Documents/COVID/south africa.R")
 ## Cases
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(sa_case_plot)
-ggplotly(sa_ratio_log)
+ggplotly(sa_case_plot) %>%
+  layout(
+    title = paste(
+      '<b>COVID-19 Cases in South Africa</b>',
+      '<br><span style="font-size: 12px;">',
+      'Daily total and 7-day average'
+    ),
+    margin = list(t = 100)
+  )
+ggplotly(sa_ratio_log) %>%
+  layout(
+    title = paste(
+      '<b>COVID-19 Cases in South Africa (Log Scale)</b>',
+      '<br><span style="font-size: 12px;">',
+      'Daily total and 7-day average'
+    ),
+    margin = list(t = 100)
+  )
 
 ```
 
@@ -25,14 +41,38 @@ The line chart below shows the weekly growth multiplier of seven-day average cas
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-ggplotly(sa_ratio_plot)
+ggplotly(sa_ratio_plot) %>%
+  layout(
+    title = paste(
+      '<b>Week-Over-Week Case Growth Multiplier</b>',
+      '<br><span style="font-size: 12px;">',
+      'Change in 7-day average cases compared to prior week'
+    ),
+    margin = list(t = 100)
+  )
 ```
 
 ## Deaths
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(sa_deaths_plot)
-ggplotly(sa_deaths_log)
+ggplotly(sa_deaths_plot) %>%
+  layout(
+    title = paste(
+      '<b>Reported COVID-19 Deaths in South Africa</b>',
+      '<br><span style="font-size: 12px;">',
+      'Daily total and 7-day average'
+    ),
+    margin = list(t = 100)
+  )
+ggplotly(sa_deaths_log) %>%
+  layout(
+    title = paste(
+      '<b>Reported COVID-19 Deaths in South Africa (Log Scale)</b>',
+      '<br><span style="font-size: 12px;">',
+      'Daily total and 7-day average'
+    ),
+    margin = list(t = 100)
+  )
 ```
 
 **Percentage of peak values**
@@ -40,7 +80,12 @@ This charts display the 7-day average for deaths (black) and cases (orange) over
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_pk_plot) %>%
-  layout(legend = list(orientation = "h", x =0.25, y = .97))
+  layout(legend = list(orientation = "h", x =0.25, y = .97),
+         title = paste('<b>Relationship Betwewen COVID-19 Cases and Deaths</b>',
+                       '<br><span style="font-size: 12px;">',
+                       'Cases and deaths shown as percentage of their peak from July 2021. Deaths lagged 17 days.'),
+    margin = list(t = 100)
+  )
 ```
 
 **Case fatality rate**
@@ -48,13 +93,25 @@ This chart displays the 7-day average for deaths (lagged 17 days) divided by the
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(cfr_plot)
+ggplotly(cfr_plot) %>%
+  layout(title = paste('<b>Estimated Case Fatality Rate </b>',
+                       '<br><span style="font-size: 12px;">',
+                       'New deaths (7-day average) divided by new cases (7-day average) 17 days earlier'),
+    margin = list(t = 100))
 ```
 
-## Test Positivity 
+## Testing and Positivity 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(pos_rate_plot)
+ggplotly(pos_rate_plot) %>%
+  layout(
+    title = paste(
+      '<b>Daily Testing and Positivity Rate</b>',
+      '<br><span style="font-size: 12px;">',
+      '7-day average test positivity (points/lines) and 7-day average daily testing (area)'
+    ),
+    margin = list(t = 100)
+  )
 
 ```
 ## Hospitals
@@ -62,13 +119,22 @@ Data from Data Science for Social Impact Research Group @ University of Pretoria
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(sa_hosp)
+ggplotly(sa_hosp) %>%
+  layout(
+    title = paste(
+      '<b>South Africa COVID-19 Hospitalizations</b>'),
+    margin = list(t = 100))
+  
 ```
 
 **Gauteng Province**
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(gt_hosp)
+ggplotly(gt_hosp) %>%
+  layout(
+    title = paste(
+      '<b>Gauteng Province COVID-19 Hospitalizations</b>'),
+    margin = list(t = 100))
 ```
 
 **Percentage of Peak Values** 
@@ -76,10 +142,24 @@ Case and hospitalization metrics (seven-day averages) over time as percentage of
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_hosp_plot) %>%
-  layout(legend = list(orientation = "h", x =0.15, y = 1.05))
+  layout(legend = list(orientation = "h", x =0.15, y = 1.05)) %>%
+  layout(
+    title = paste(
+      '<b>Relationship Between Cases and Hospitalizations</b>',
+      '<br><span style="font-size: 12px;">',
+      'New cases and current COVID-19 hospitalizations (all, ICU, ventilated) shown as percentage of peak values'
+    ),
+    margin = list(t = 100))
 
 ggplotly(icu_pct_plot) %>%
-  layout(legend = list(orientation = "h", x =.62, y = .92))
+  layout(legend = list(orientation = "h", x =.62, y = .92)) %>%
+  layout(
+    title = paste(
+      '<b>Severity of Hospitaliations</b>',
+      '<br><span style="font-size: 12px;">',
+      'Percentage of COVID-19 patients in ICU and ventilated in South Africa and Gauteng Province over time'
+    ),
+    margin = list(t = 100))
 ```
 
 
