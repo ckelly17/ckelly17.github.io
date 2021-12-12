@@ -152,12 +152,12 @@ ggplotly(pct_hosp_plot) %>%
     margin = list(t = 100))
 
 ggplotly(icu_pct_plot) %>%
-  layout(legend = list(orientation = "h", x =.62, y = .92)) %>%
+  layout(legend = list(orientation = "h", x =0.25, y = 1.15)) %>%
   layout(
     title = paste(
-      '<b>Severity of Hospitaliations</b>',
-      '<br><span style="font-size: 12px;">',
-      'Percentage of COVID-19 patients in ICU and ventilated in South Africa and Gauteng Province over time'
+      '<b>ICU and Ventilated as Percentage of COVID-19 Admissions</b>',
+      '<br><span style="font-size: 10px;">',
+      '-'
     ),
     margin = list(t = 100))
 ```
