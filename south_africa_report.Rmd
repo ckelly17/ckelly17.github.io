@@ -37,16 +37,16 @@ ggplotly(sa_ratio_log) %>%
 
 ```
 
-The line chart below shows the weekly growth multiplier of seven-day average cases. Values over 100% indicate case growth, while values under 100% mean case decline. For example, a 200% growth multiplier would mean cases are twice as high as the week before (rising); 50% would mean that they are only half as high (falling). Dots show daily values compared to seven days earlier. 
+The line chart below shows the weekly growth multiplier of seven-day average cases. Values over 1 indicate case growth, while values under 1 mean case decline. For example, a 2.0 growth multiplier would mean cases are twice as high as the week before (rising); 0.5 would mean that they are only half as high (falling). Dots show daily values compared to seven days earlier. 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
 ggplotly(sa_ratio_plot) %>%
   layout(
     title = paste(
-      '<b>Week-Over-Week Case Growth Multiplier</b>',
+      '<b>Week-Over-Week Case Multiplier</b>',
       '<br><span style="font-size: 12px;">',
-      'Change in 7-day average cases compared to prior week. Y-axis scale is logarithmic.'
+      '7-day average cases compared to prior week. Y-axis scale is logarithmic.'
     ),
     margin = list(t = 100)
   )
@@ -126,8 +126,6 @@ ggplotly(sa_hosp) %>%
     margin = list(t = 100))
   
 ```
-
-**Gauteng Province**
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(gt_hosp) %>%
