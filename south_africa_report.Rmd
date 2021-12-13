@@ -142,7 +142,7 @@ ggplotly(pct_hosp_plot) %>%
     title = paste(
       '<b>Relationship Between Cases and Hospitalizations</b>',
       '<br><span style="font-size: 12px;">',
-      'South African new cases and current COVID-19 hospitalizations (all, ICU, ventilated) as percentage of peak values'
+      'National new cases and current COVID-19 hospitalizations (all, ICU, ventilated) as percentage of peak values'
     ),
     margin = list(t = 100))
 
