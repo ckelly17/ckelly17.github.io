@@ -78,7 +78,7 @@ This charts display the 7-day average for deaths (black) and cases (orange) over
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_pk_plot) %>%
   layout(legend = list(orientation = "h", x =0.25, y = .97),
-         title = paste('<b>Relationship Betwewen COVID-19 Cases and Deaths</b>',
+         title = paste('<b>Relationship Between COVID-19 Cases and Deaths</b>',
                        '<br><span style="font-size: 12px;">',
                        'Cases and deaths shown as percentage of their peak from July 2021. Deaths lagged 17 days.'),
     margin = list(t = 100)
@@ -133,14 +133,14 @@ ggplotly(gt_hosp) %>%
 ```
 
 **Percentage of Peak Values** 
-Case and hospitalization metrics (seven-day averages) over time as percentage of peak values. No lags are applied. The gray area chart shows the progression of cases over time, while the lines show hospitalization metrics.
+Case and hospitalization metrics (seven-day averages) over time as percentage of peak values for South Africa. No lags are applied. The gray area chart shows the progression of cases over time, while the lines show hospitalization metrics.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pct_hosp_plot) %>%
   layout(legend = list(orientation = "h", x =0.15, y = 1.05)) %>%
   layout(
     title = paste(
-      '<b>Relationship Between Cases and Hospitalizations</b>',
+      '<b>Relationship Between Cases and Hospitalizations in South Africa</b>',
       '<br><span style="font-size: 12px;">',
       'New cases and current COVID-19 hospitalizations (all, ICU, ventilated) shown as percentage of peak values'
     ),
