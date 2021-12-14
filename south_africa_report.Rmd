@@ -8,7 +8,9 @@ output:
 
 Cases, deaths, and testing data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). Hospitalization data from the Data Science for Social Impact Research Group @ University of Pretoria, *Coronavirus COVID-19 (2019-nCoV) Data Repository for South Africa*. Available on: https://github.com/dsfsi/covid19za.
 
-I display data since the beginning of 2021. My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). Many thanks to all who have made this data available.
+I display data since the beginning of 2021. Dashed lines indicate the date (Nov 25, 2021) when the Omicron variant was announced by the South Africa National Institute for Communicable Diseases. My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). 
+
+Many thanks to all who have made this data available.
 
 ## Cases
 
@@ -114,7 +116,7 @@ ggplotly(pos_rate_plot) %>%
 
 ```
 ## Hospitals
-Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv). Presented first for South Africa as a whole and then for Gauteng Province specifically. Dashed lines indicate the date (Nov 25, 2021) when the Omicron variant was announced by the South Africa National Institute for Communicable Diseases.
+Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv). Presented first for South Africa as a whole and then for Gauteng Province specifically. 
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
