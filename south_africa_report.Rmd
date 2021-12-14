@@ -99,6 +99,8 @@ ggplotly(cfr_plot) %>%
 
 ## Testing and Positivity 
 
+Positive rate reflects the 7-day average for new reported cases divided by the 7-day average for new reported tests. When data from JHU/Our World in Data lags reported data, I instead use figures from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv) that include data from NICD press releases.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pos_rate_plot) %>%
   layout(
