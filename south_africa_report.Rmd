@@ -114,7 +114,15 @@ ggplotly(pos_rate_plot) %>%
     ),
     margin = list(t = 100)
   )
-
+ggplotly(reg_pp_plot) %>%
+  layout(
+    title = paste(
+      '<b>Weekly Positivity Rates</b>',
+      '<br><span style="font-size: 12px;">',
+      'South Africa and Gauteng Province'
+    ),
+    margin = list(t = 100)
+  )
 ```
 ## Hospitals
 Data from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv). Presented first for South Africa as a whole and then for Gauteng Province specifically. 
@@ -141,8 +149,8 @@ ggplotly(gt_hosp) %>%
 Case and hospitalization metrics (seven-day averages) over time as percentage of peak values for South Africa. No lags are applied. The gray area chart shows the progression of cases over time, while the lines show hospitalization metrics.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(pct_hosp_plot) %>%
-  layout(legend = list(orientation = "h", x =0.15, y = 1.05)) %>%
+ggplotly(pct_hosp_plot, height = 800) %>%
+  layout(legend = list(orientation = "h", x =0.15, y = .99)) %>%
   layout(
     title = paste(
       '<b>Relationship Between Cases and Hospitalizations</b>',
