@@ -15,7 +15,7 @@ Many thanks to all who have made this data available.
 ## Cases
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(sa_case_plot) %>%
+ggplotly(sa_case_plot, height = 800) %>%
   layout(
     title = paste(
       '<b>COVID-19 Cases in South Africa</b>',
@@ -24,7 +24,8 @@ ggplotly(sa_case_plot) %>%
     ),
     margin = list(t = 100)
   )
-ggplotly(sa_ratio_log) %>%
+
+ggplotly(sa_ratio_log, height = 800) %>%
   layout(
     title = paste(
       '<b>COVID-19 Cases in South Africa (Log Scale)</b>',
@@ -40,7 +41,7 @@ The line chart below shows the weekly growth multiplier of seven-day average cas
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-ggplotly(sa_ratio_plot) %>%
+ggplotly(sa_ratio_plot, height = 800) %>%
   layout(
     title = paste(
       '<b>Week-Over-Week Case Multiplier</b>',
@@ -54,7 +55,7 @@ ggplotly(sa_ratio_plot) %>%
 ## Deaths
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(sa_deaths_plot) %>%
+ggplotly(sa_deaths_plot, height = 800) %>%
   layout(
     title = paste(
       '<b>Reported COVID-19 Deaths in South Africa</b>',
@@ -63,7 +64,7 @@ ggplotly(sa_deaths_plot) %>%
     ),
     margin = list(t = 100)
   )
-ggplotly(sa_deaths_log) %>%
+ggplotly(sa_deaths_log, height = 800) %>%
   layout(
     title = paste(
       '<b>Reported COVID-19 Deaths in South Africa (Log Scale)</b>',
@@ -75,10 +76,10 @@ ggplotly(sa_deaths_log) %>%
 ```
 
 **Percentage of peak values**
-This charts display the 7-day average for deaths (black) and cases (orange) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
+This charts display the 7-day average for deaths (black) and cases (orange) over time, expressed as the percentage of the all-time high values reached in summer 2021. Deaths are lagged by 17 days, the observed gap between the peak of cases and the peak of deaths for South Africa as a whole during the summer of 2021 (Delta wave). It is designed to explore differences in disease severity over time.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(pct_pk_plot) %>%
+ggplotly(pct_pk_plot, height = 800) %>%
   layout(legend = list(orientation = "h", x =0.25, y = .97),
          title = paste('<b>Relationship Between COVID-19 Cases and Deaths</b>',
                        '<br><span style="font-size: 12px;">',
@@ -92,7 +93,7 @@ This chart displays the 7-day average for deaths (lagged 17 days) divided by the
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(cfr_plot) %>%
+ggplotly(cfr_plot, height = 800) %>%
   layout(title = paste('<b>Estimated Case Fatality Rate </b>',
                        '<br><span style="font-size: 12px;">',
                        'New deaths (7-day average) divided by new cases (7-day average) 17 days earlier'),
