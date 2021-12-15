@@ -6,11 +6,42 @@ output:
     toc_float: true
 ---
 
-Cases, deaths, and testing data provided by [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [South Africa Department of Health](https://sacoronavirus.co.za/). Hospitalization data from the Data Science for Social Impact Research Group @ University of Pretoria, *Coronavirus COVID-19 (2019-nCoV) Data Repository for South Africa*. Available on: https://github.com/dsfsi/covid19za.
+Nearly all data shown here is from the [South Africa National Institue for Communicable Diseases](https://www.nicd.ac.za/) (NICD), but it is accessed through different channels. Cases, deaths, and testing data are retrieved from [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [NICD](https://sacoronavirus.co.za/). Hospitalization data and provincial data are retrieved from from the Data Science for Social Impact Research Group @ University of Pretoria, *Coronavirus COVID-19 (2019-nCoV) Data Repository for South Africa*. Available on: https://github.com/dsfsi/covid19za. Many thanks to all who have worked to collect this data and make it publicly accessible.
 
-I display data since the beginning of 2021. Dashed lines indicate the date (Nov 25, 2021) when the Omicron variant was announced by the South Africa National Institute for Communicable Diseases. My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). 
+I display data since the beginning of 2021. Dashed lines indicate the date (Nov 25, 2021) when the Omicron variant was announced by NICD. My processing and analysis code can be found [here](https://github.com/ckelly17/South-Africa-COVID-19). 
 
-Many thanks to all who have made this data available.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# 
+# Data <- c("South Africa Daily Cases, Deaths, Tests, Percent Positive",
+#           "Provincial Testing, Cases, Deaths",
+#           "Hospitalizations")
+# DataSource <- c("National Institue for Communicable Diseases", 
+#                 "NICD", 
+#                 "NICD Hospital Surveillance")
+# AccessedVia <- c("Our World in Data", 
+#                  "Data Science for Social Impact Research Group", 
+#                  "Data Science for Social Impact Research Group")
+# 
+# links <- c("https://github.com/owid/covid-19-data/tree/master/public/data",
+#           "https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv",
+#           "https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_provincial_timeline_testing_positivityrate.csv")
+# 
+# urls <- rep("https://stackoverflow.com/", 10)
+# # use paste0 to compose markdown-formatted hyperlinks
+# 
+# 
+# 
+# df <- data.frame(Data, DataSource, AccessedVia)
+# df$AccessedVia <- paste0("[", df$AccessedVia, "](", links, ")")
+# 
+# 
+# df %>% knitr::kable(format = "simple")
+
+```
+
+
+
 
 ## Cases
 
@@ -102,7 +133,7 @@ ggplotly(cfr_plot, height = 800) %>%
 
 ## Testing and Positivity 
 
-Positive rate reflects the 7-day average for new reported cases divided by the 7-day average for new reported tests. When data from JHU/Our World in Data lags reported data, I instead use figures from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/dsfsi/covid19za/blob/master/data/covid19za_provincial_raw_hospitalization.csv) that include data from NICD press releases.
+Positive rate reflects the 7-day average for new reported cases divided by the 7-day average for new reported tests. When data from JHU/Our World in Data lags reported data, I instead use figures from Data Science for Social Impact Research Group @ University of Pretoria via [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) that include data from NICD press releases. Provincial weekly positive rates are also from here.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ggplotly(pos_rate_plot) %>%
