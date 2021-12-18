@@ -210,33 +210,33 @@ ggplotly(icu_pct_plot) %>%
 ## Data Table (JHU)
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
-# library(lubridate)
-# library(pracma)
-# library(data.table)
-# 
-# cases <- as_tibble(fread("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")) %>%
-#   mutate(var = "cases")
-# 
-# deaths <- as_tibble(fread("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")) %>%
-#   mutate(var = "deaths")
-# 
-# cases %>%
-#   bind_rows(deaths) %>%
-#   select(-Lat, -Long) %>%
-#   pivot_longer(cols = -c(`Province/State`, `Country/Region`, var),
-#                names_to = 'date',
-#                values_to = 'total') %>%
-#   filter(`Country/Region` %in% "South Africa") %>%
-#   select(-c(`Province/State`, `Country/Region`)) %>%
-#   mutate(date = mdy(date)) %>%
-#   mutate(weekday = lubridate::wday(date, label = TRUE, abbr = FALSE)) %>%
-#   arrange(date) %>%
-#   group_by(var) %>%
-#   mutate(new = total - lag(total)) %>%
-#   mutate(avg_7day = movavg(new, 7)) %>%
-#   tail(16) %>%
-#   arrange(var) %>%
-#   knitr::kable(align = 'c')
+library(lubridate)
+library(pracma)
+library(data.table)
+
+cases <- as_tibble(fread("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")) %>%
+  mutate(var = "cases")
+
+deaths <- as_tibble(fread("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")) %>%
+  mutate(var = "deaths")
+
+cases %>%
+  bind_rows(deaths) %>%
+  select(-Lat, -Long) %>%
+  pivot_longer(cols = -c(`Province/State`, `Country/Region`, var),
+               names_to = 'date',
+               values_to = 'total') %>%
+  filter(`Country/Region` %in% "South Africa") %>%
+  select(-c(`Province/State`, `Country/Region`)) %>%
+  mutate(date = mdy(date)) %>%
+  mutate(weekday = lubridate::wday(date, label = TRUE, abbr = FALSE)) %>%
+  arrange(date) %>%
+  group_by(var) %>%
+  mutate(new = total - lag(total)) %>%
+  mutate(avg_7day = movavg(new, 7)) %>%
+  tail(16) %>%
+  arrange(var) %>%
+  knitr::kable(align = 'c')
   
 ```
 
