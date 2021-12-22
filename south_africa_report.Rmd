@@ -141,7 +141,7 @@ ggplotly(pos_rate_plot) %>%
     title = paste(
       '<b>Daily Testing and Positivity Rate</b>',
       '<br><span style="font-size: 12px;">',
-      '7-day average test positivity (points/lines) and 7-day average daily testing (area)'
+      '7-day average test positivity (dark green line) and 7-day average daily testing (dashed)'
     ),
     margin = list(t = 100)
   )
