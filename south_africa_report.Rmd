@@ -4,6 +4,9 @@ output:
   html_document:
     toc: true
     toc_float: true
+    
+    includes:
+       in_header: tag.html
 ---
 
 Nearly all data shown here is from the [South Africa National Institue for Communicable Diseases](https://www.nicd.ac.za/) (NICD), but it is accessed through different channels. Cases, deaths, and testing data are retrieved from [Our World in Data](https://ourworldindata.org/) on [GitHub](https://github.com/owid/covid-19-data/tree/master/public/data) via [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) and [NICD](https://sacoronavirus.co.za/). Hospitalization data and provincial data are retrieved from from the Data Science for Social Impact Research Group @ University of Pretoria, *Coronavirus COVID-19 (2019-nCoV) Data Repository for South Africa*. Available on: https://github.com/dsfsi/covid19za. Many thanks to all who have worked to collect this data and make it publicly accessible.
