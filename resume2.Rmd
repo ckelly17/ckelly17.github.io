@@ -1,7 +1,7 @@
 ---
 title: "Conor's resume"
 author: Conor Kelly
-output: pagedown::html_resume
+output: pagedown::html_resume:
   includes:
     in_header: tag.html
 
