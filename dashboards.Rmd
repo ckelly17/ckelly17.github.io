@@ -4,13 +4,15 @@ output:
   html_document:
     toc: true
     toc_float: true
+    includes:
+       in_header: tag.html
 ---
 
 I enjoy creating dashboards on topics that interest me. Most of them are hosted on my [Tableau Public site](https://public.tableau.com/profile/ckelly2528#!/), but you can find them below as well. Sometimes you'll find me highlighting them on Twitter.
 
 
 ### COVID-19 Daily Statistics
-This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests. Click [here](covid_dashboard.html) to view the dashboard. 
+This dashboard uses data from the New York Times, the Department of Health and Human Services, and the Centers for Disease Control and Prevention to display trends in COVID-19 cases, deaths, hospitalizations and tests. Click [here](covid_dashboard.html) to view the dashboard. 
 
 <p><a href="covid_dashboard.html">
 <img src="covid_pic.png" width=40% align="left" id="hp" />

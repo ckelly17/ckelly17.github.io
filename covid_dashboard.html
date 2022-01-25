@@ -3,16 +3,6 @@
 <html>
 
 <head>
-  
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLDZRMDERM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JLDZRMDERM');
-</script>
 
 <meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
@@ -36,6 +26,15 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLDZRMDERM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLDZRMDERM');
+</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -351,20 +350,15 @@ $(document).ready(function () {
 </div>
 
 
-<p>This dashboard uses data from the <a href="https://github.com/nytimes/covid-19-data">New York Times</a> and <a href="https://covidtracking.com/">The COVID Tracking Project</a> to display trends in COVID-19 cases, deaths, hospitalizations and tests. The code that builds the dataset can be found on <a href="https://github.com/ckelly17/Coronavirus-Dashboard">GitHub</a>.</p>
+<p>This dashboard uses data from the New York Times, the Department of Health and Human Services, and the Centers for Disease Control and Prevention to display trends in COVID-19 cases, deaths, hospitalizations and tests.</p>
 <iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&amp;:embed=true" scrolling="no" width="1050" height="805" frameBorder="0">
 </iframe>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<p> 
-
- <font size="2"> <center> This website was created using <a href="https://rmarkdown.rstudio.com/">R Markdown.</a> </center> </font>
-</p>
+<p><strong>Sources</strong></p>
+<p><a href="https://healthdata.gov/dataset/COVID-19-Diagnostic-Laboratory-Testing-PCR-Testing/j8mb-icvb">COVID-19 Diagnostic Laboratory Testing (PCR Testing) Time Series</a>. <em>U.S. Department of Health and Human Services.</em></p>
+<p><a href="https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">COVID-19 Reported Patient Impact and Hospital Capacity by State Timeseries</a>. <em>U.S. Department of Health and Human Services.</em></p>
+<p><a href="https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36">United States COVID-19 Cases and Deaths by State over Time</a>. <em>U.S. Centers for Disease Control and Prevention.</em></p>
+<p><a href="https://github.com/nytimes/covid-19-data/blob/master/us-counties.csv">Coronavirus (Covid-19) Data in the United States</a>. <em>The New York Times.</em></p>
+<p>The code that builds the dataset can be found on <a href="https://github.com/ckelly17/Coronavirus-Dashboard">GitHub</a>.</p>
 
 
 

@@ -1,11 +1,28 @@
 ---
 title: "COVID-19 Dashboard"
 output:
-  html_document
+  html_document:
+    includes:
+       in_header: tag.html
+  
 ---
 
-This dashboard uses data from the [New York Times](https://github.com/nytimes/covid-19-data) and [The COVID Tracking Project](https://covidtracking.com/) to display trends in COVID-19 cases, deaths, hospitalizations and tests. The code that builds the dataset can be found on [GitHub](https://github.com/ckelly17/Coronavirus-Dashboard).
+This dashboard uses data from the New York Times, the Department of Health and Human Services, and the Centers for Disease Control and Prevention to display trends in COVID-19 cases, deaths, hospitalizations and tests.
 
 
 <iframe src="https://public.tableau.com/views/COVIDDashboard-Public/NationalOverview?:showVizHome=no&amp;:embed=true" scrolling="no"
  width="1050" height="805" frameBorder = "0"></iframe>
+ 
+**Sources**
+
+
+[COVID-19 Diagnostic Laboratory Testing (PCR Testing) Time Series](https://healthdata.gov/dataset/COVID-19-Diagnostic-Laboratory-Testing-PCR-Testing/j8mb-icvb). *U.S. Department of Health and Human Services.*
+
+[COVID-19 Reported Patient Impact and Hospital Capacity by State Timeseries](https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh). *U.S. Department of Health and Human Services.*
+
+[United States COVID-19 Cases and Deaths by State over Time](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36). *U.S. Centers for Disease Control and Prevention.*
+
+[Coronavirus (Covid-19) Data in the United States](https://github.com/nytimes/covid-19-data/blob/master/us-counties.csv). *The New York Times.*
+
+
+The code that builds the dataset can be found on [GitHub](https://github.com/ckelly17/Coronavirus-Dashboard).
