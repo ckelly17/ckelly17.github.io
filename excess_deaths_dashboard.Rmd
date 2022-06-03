@@ -1,0 +1,20 @@
+---
+title: "CDC COVID-19 Excess Deaths Dashboard"
+output:
+  html_document:
+    includes:
+       in_header: tag.html
+  
+---
+
+This dashboard uses data from the Centers for Disease Control and Prevention to display trends in excess deaths related to COVID-19. For more information, see the CDC's site at https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm.
+
+
+<iframe src="https://public.tableau.com/views/ExcessDeathsCDC/EXCESS_DEATHS?:showVizHome=no&amp;:embed=true" scrolling="no"
+ width="1050" height="805" frameBorder = "0"></iframe>
+ 
+ 
+**Sources**
+
+
+[Excess Deaths Associated with COVID-19](https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm). *U.S. Centers for Disease Control and Prevention.*

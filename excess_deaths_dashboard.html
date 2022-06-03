@@ -11,7 +11,7 @@
 
 
 
-<title>Dashboards</title>
+<title>CDC COVID-19 Excess Deaths Dashboard</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -20,9 +20,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -275,69 +272,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -345,16 +279,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -421,74 +345,19 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Dashboards</h1>
+<h1 class="title toc-ignore">CDC COVID-19 Excess Deaths Dashboard</h1>
 
 </div>
 
 
-<p>I enjoy creating dashboards on topics that interest me. Most of them are hosted on my <a href="https://public.tableau.com/profile/ckelly2528#!/">Tableau Public site</a>, but you can find them below as well. Sometimes you’ll find me highlighting them on Twitter.</p>
-<div id="covid-19-daily-statistics" class="section level3">
-<h3>COVID-19 Daily Statistics</h3>
-<p>This dashboard uses data from the Department of Health and Human Services, and the Centers for Disease Control and Prevention to display trends in COVID-19 cases, deaths, hospitalizations and tests. Click <a href="covid_dashboard.html">here</a> to view the dashboard.</p>
-<p>
-<a href="covid_dashboard.html"> <img src="covid_pic.png" width=40% align="left" id="hp" /> </a>
-</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
-</div>
-<div id="covid-19-vaccine-distribution" class="section level3">
-<h3>COVID-19 Vaccine Distribution</h3>
-<p>This dashboard presents data from the <a href="">CDC</a> on vaccine distribution and administration in the United States, with the aim of tracking the US’ ramp-up of vaccination capacity.Click <a href="vaccine_dashboard.html">here</a> to view the dashboard.</p>
-<p>
-<a href="vaccine_dashboard.html"> <img src="vaccine_homepage.png" width=40% align="left" id="hp" /> </a>
-</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
-</div>
-<div id="additional-covid-19-analytics" class="section level3">
-<h3>Additional COVID-19 analytics</h3>
-<ul>
-<li><a href="south_africa_report.html">Omicron Variant: South Africa COVID-19 Analytics</a></li>
-<li><a href="excess_deaths_dashboard.html">CDC Excess Deaths Dashboard</a></li>
-</ul>
-<!-- ### Omicron Variant: South Africa Charts -->
-<!-- This page presents data for South Africa to track the trajectory of the Omicron variant. Click [here](south_africa_report.html) to view the site.  -->
-<!-- <p><a href="south_africa_report.html"> -->
-<!-- <img src="south_afr.png" width=40% align="left" id="hp" /> -->
-<!-- </a></p> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-</div>
-<div id="election-presidential-polling-averages" class="section level3">
-<h3>2020 Election: Presidential Polling Averages</h3>
-This dashboard used data from <a href="https://github.com/fivethirtyeight/data/tree/master/polls">FiveThirtyEight</a> to compare presidential polling averages at similar points in the 2016 and 2020 presidential elections. Click <a href="polling_dashboard.html">here</a> to view the dashboard. <br>
-<p>
-<a href="polling_dashboard.html"> <img src="polling_pic.png" width=40% align="left" id="hp" /> </a>
-</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
-</div>
-<div id="election-early-vote-tracker" class="section level3">
-<h3>2020 Election: Early Vote Tracker</h3>
-<p>This dashboard used data from Michael McDonald and the <a href="https://electproject.github.io/Early-Vote-2020G/index.html">U.S. Elections Project</a>, tracking vote-by-mail and early voting trends in the 2020 general election. Michael’s site only provided a snapshot of early voting trends, so I cached the daily data to show trends over the course of the full run-up to the election. Click <a href="https://public.tableau.com/profile/ckelly2528#!/vizhome/VotebyMailTracker/Dashboard1">here</a> to view the dashboard.</p>
-<br>
-<p>
-<a href="polling_dashboard.html"> <img src="early_vote_pic.png" width=40% align=left id="hp" /> </a>
-</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
-</div>
+<p>This dashboard uses data from the Centers for Disease Control and Prevention to display trends in excess deaths related to COVID-19. For more information, see the CDC’s site at <a href="https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm" class="uri">https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm</a>.</p>
+<iframe src="https://public.tableau.com/views/ExcessDeathsCDC/EXCESS_DEATHS?:showVizHome=no&amp;:embed=true" scrolling="no" width="1050" height="805" frameBorder="0">
+</iframe>
+<p><strong>Sources</strong></p>
+<p><a href="https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm">Excess Deaths Associated with COVID-19</a>. <em>U.S. Centers for Disease Control and Prevention.</em></p>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -521,32 +390,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
