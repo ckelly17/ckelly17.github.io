@@ -6,10 +6,10 @@ if("pacman" %in% installed.packages()){
 }
 
 p_load(pdftools)
-p_load(tidyverse)
+p_load(dplyr)
+p_load(readr)
+p_load(stringr)
 p_load(rvest)
-p_load(RCurl)
-p_load(XML)
 p_load(xml2)
 p_load(lubridate)
 p_load(scales)
@@ -19,7 +19,7 @@ p_load(plotly)
 
 # get url of PDF
 mwra_link <- "https://www.mwra.com/biobot/biobotdata.htm"
-cntnt <- read_html(mwra_link)
+cntnt <- xml2::read_html(mwra_link)
 links <- html_attr(html_nodes(cntnt, "a"), "href") %>%
   as_tibble() %>%
   filter(str_detect(value, "data.pdf"))
