@@ -1,0 +1,14 @@
+Package: MassCOVID
+Title: Running R Scripts on a Schedule with GitHub Actions
+Version: 1.0.0
+Authors@R: 
+    person(given = "Conor",
+           family = "Kelly",
+           role = c("aut", "cre"),
+           email = "conor.richard.kelly@gmail.com")
+Description: Pulls and displays Massachusetts COVID data
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
