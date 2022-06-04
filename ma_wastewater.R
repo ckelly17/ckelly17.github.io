@@ -6,6 +6,7 @@ if("pacman" %in% installed.packages()){
 }
 
 system("sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev")
+print("command went through")
 
 p_load(pdftools)
 p_load(dplyr)
