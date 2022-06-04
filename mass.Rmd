@@ -9,7 +9,7 @@ deploy <- TRUE
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
 }
-source("app/ma_wastewater.R")
+source("ma_wastewater.R")
 ```
 Data sourced from https://www.mwra.com/biobot/biobotdata.htm
 
