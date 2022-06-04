@@ -1,4 +1,10 @@
 # libraries
+if("pacman" %in% installed.packages()){
+  library(pacman)
+}else{
+  install.packages("pacman")
+  library(pacman)
+}
 
 p_load(tidyverse)
 p_load(lubridate)
