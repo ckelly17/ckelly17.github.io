@@ -1,4 +1,10 @@
-library(pacman)
+if("pacman" %in% installed.packages()){
+  library(pacman)
+}else{
+  install.packages("pacman")
+  library(pacman)
+}
+
 p_load(pdftools)
 p_load(tidyverse)
 p_load(rvest)
