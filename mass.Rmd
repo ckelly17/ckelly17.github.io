@@ -1,0 +1,23 @@
+---
+title: "Boston COVID-19 Wastewater Analysis"
+output: html_document
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+deploy <- FALSE
+
+if(deploy == FALSE){
+  setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
+}
+source("app/ma_wastewater.R")
+```
+Data sourced from https://www.mwra.com/biobot/biobotdata.htm
+
+Last MMWRA update: `r updated`
+
+Last checked: `r last_checked`
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+fig
+log_fig
+ratio
+```
