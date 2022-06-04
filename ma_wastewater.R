@@ -4,12 +4,13 @@ if("pacman" %in% installed.packages()){
   install.packages("pacman")
   library(pacman)
 }
-
+read_html()
 p_load(pdftools)
 p_load(tidyverse)
 p_load(rvest)
 p_load(RCurl)
 p_load(XML)
+p_load(xml2)
 p_load(lubridate)
 p_load(scales)
 p_load(plotly)
