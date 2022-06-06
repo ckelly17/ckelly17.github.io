@@ -21,29 +21,19 @@ p_load(ungeviz)
 p_load(httr)
 p_load(readxl)
 
+pg <- read_html("https://www.mass.gov/info-details/covid-19-response-reporting")
+
+links <- as_tibble(html_attr(html_nodes(pg, "a"), "href"))
+raw <- links %>% filter(str_detect(value, "covid-19-raw-data-"))
+mass_data_link <- paste0("https://www.mass.gov", raw[1])
+
 # fetch
 
-#curr_date <- mdy(Sys.Date())
-
-before_5 <- ifelse(hour(Sys.time()) >=17, FALSE, TRUE)
-
-month <- lubridate::month(Sys.Date(), label = TRUE, abbr = FALSE) %>%
-  as.character() %>%
-  str_to_lower()
-day <- lubridate::day(Sys.Date())
-day <- ifelse(before_5 == TRUE, day - 1, day)
-yr <- lubridate::year(Sys.Date())
-
-date <- paste(month, day, yr, sep = "-")
-mass_data_link <- paste0("https://www.mass.gov/doc/covid-19-raw-data-", date, "/download")
-
-target <- "/Users/conorkelly/Downloads/mass_raw.xlsx"
+target <- "mass_raw.xlsx"
 sheet <- "CasesByDate (Test Date)"
 
-tryCatch(
-  expr = download.file(mass_data_link, target),
-  
-)
+download.file(mass_data_link, target)
+
 mass_raw <- read_excel(target, sheet = sheet) %>%
   clean_names() %>%
   mutate(date = ymd(date)) %>%
