@@ -21,14 +21,13 @@ source("ma_wastewater.R")
 # x <- 1
 # print(x)
 ```
-Data sourced from https://www.mwra.com/biobot/biobotdata.htm
+The charts below display data collected by the Massachusetts Wastewater Resource Authority (MWRA) on levels of COVID-19 in Boston-area wastewater. For more information, see the [MWRA site](https://www.mwra.com/biobot/biobotdata.htm). 
 
-Last MMWRA update: `r updated`
-
-Last checked: `r last_checked`
+Last MWRA update: ``r updated``
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 fig
 log_fig
 ratio
 ```
+Last checked: ``r last_checked``
