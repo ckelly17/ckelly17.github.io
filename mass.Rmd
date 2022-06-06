@@ -9,7 +9,7 @@ deploy <- TRUE
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
 }
-source("mass.R")
+#source("mass.R")
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -17,7 +17,7 @@ source("mass.R")
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-#source("ma_wastewater.R")
+source("ma_wastewater.R")
 # x <- 1
 # print(x)
 ```
