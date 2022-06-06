@@ -38,6 +38,12 @@ jobs:
             lubridate
             scales
             plotly
+            pracma
+            RColorBrewer
+            data.table
+            anytime
+            httr
+            readxl
           
       - uses: r-lib/actions/setup-r@master
         with:
