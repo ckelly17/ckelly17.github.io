@@ -1,27 +1,55 @@
 ---
-title: "Boston COVID-19 Wastewater Analysis"
-output: html_document
+title: "Massachusetts COVID-19 Analysis"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
+
+This page displays analysis of Massachusetts COVID-19 data from the Massachusetts Department of Public Health (MDPH) and the Massachusetts Wastewater Resources Authority (MWRA). 
+<br>
+<br>
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
 deploy <- TRUE
 
 if(deploy == FALSE){
-  setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
+  setwd("/Users/conorkelly/Documents/ckelly17.github.io")
 }
 source("mass.R")
 ```
 
+## Daily statistics from MDPH
+The charts below display daily data compiled by MDPH on COVID-19 cases, hospitalizations, and deaths in Massachusetts. The most recent data is through ``r max_date_mass``.
+
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(mass_hosps_plt)
+ggplotly(mass_case_plot)
+ggplotly(ma_log)
+ggplotly(mass_ratio)
+ggplotly(ma_test_plt)
+
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
-source("ma_wastewater.R")
-# x <- 1
-# print(x)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplotly(mass_hosps_plt)
+
 ```
-The charts below display data collected by the Massachusetts Wastewater Resource Authority (MWRA) on levels of COVID-19 in Boston-area wastewater. For more information, see the [MWRA site](https://www.mwra.com/biobot/biobotdata.htm). 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplotly(mass_deaths_plot)
+ggplotly(mass_cfr_plot)
+
+```
+## Wastewater Analysis
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
+if(deploy == FALSE){
+  setwd("/Users/conorkelly/Documents/ckelly17.github.io")
+}
+source("ma_wastewater.R")
+
+```
+The charts below display data collected by the Massachusetts Wastewater Resources Authority (MWRA) on levels of COVID-19 in Boston-area wastewater. For more information, see the [MWRA site](https://www.mwra.com/biobot/biobotdata.htm). 
 
 Last MWRA update: ``r updated``
 
@@ -30,4 +58,11 @@ fig
 log_fig
 ratio
 ```
+
+**Sources**
+
+*COVID-19 Response Reporting*. Massachusetts Department of Public Health. https://www.mass.gov/info-details/covid-19-response-reporting
+
+*Wastewater COVID-19 Tracking*. Massachusetts Water Resources Authority. https://www.mwra.com/biobot/biobotdata.htm
+
 Last checked: ``r last_checked``

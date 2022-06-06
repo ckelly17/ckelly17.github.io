@@ -46,6 +46,7 @@ mass_raw <- read_excel(target, sheet = sheet) %>%
          date >= "2021-10-01")
 
 max_date <- max(mass_raw$date, na.rm = T)
+max_date_mass <- max_date
 
 ## testing
 ma_test_raw <- read_excel(target, sheet = "TestingByDate (Test Date)") %>%
