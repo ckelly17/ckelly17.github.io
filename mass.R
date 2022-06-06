@@ -40,7 +40,10 @@ mass_data_link <- paste0("https://www.mass.gov/doc/covid-19-raw-data-", date, "/
 target <- "/Users/conorkelly/Downloads/mass_raw.xlsx"
 sheet <- "CasesByDate (Test Date)"
 
-download.file(mass_data_link, target)
+tryCatch(
+  expr = download.file(mass_data_link, target),
+  
+)
 mass_raw <- read_excel(target, sheet = sheet) %>%
   clean_names() %>%
   mutate(date = ymd(date)) %>%

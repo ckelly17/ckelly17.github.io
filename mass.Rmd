@@ -3,7 +3,7 @@ title: "Boston COVID-19 Wastewater Analysis"
 output: html_document
 ---
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
 deploy <- TRUE
 
 if(deploy == FALSE){
@@ -13,11 +13,11 @@ source("mass.R")
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(mass_hosps_plt)
+#ggplotly(mass_hosps_plt)
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-source("ma_wastewater.R")
+#source("ma_wastewater.R")
 # x <- 1
 # print(x)
 ```
