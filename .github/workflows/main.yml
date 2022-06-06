@@ -30,6 +30,8 @@ jobs:
           extra-packages: |
             ggplot2
             rcmdcheck
+            rmarkdown
+            tidyverse
           
       - uses: r-lib/actions/setup-r@master
         with:
