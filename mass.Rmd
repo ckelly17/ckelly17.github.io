@@ -9,11 +9,11 @@ deploy <- TRUE
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
 }
-#source("mass.R")
+source("mass.R")
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-#ggplotly(mass_hosps_plt)
+ggplotly(mass_hosps_plt)
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
