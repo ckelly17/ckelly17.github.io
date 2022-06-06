@@ -60,7 +60,7 @@ jobs:
         
       - name: Render Rmarkdown files
         run: |
-          rmarkdown::render("mass.Rmd")
+          Rscript -e 'rmarkdown::render("mass.Rmd")'
           
         #run: |
         #  source("R/job.R")
