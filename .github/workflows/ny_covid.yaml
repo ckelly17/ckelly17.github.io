@@ -1,0 +1,97 @@
+name: NY COVID Update
+on: 
+  schedule:
+    - cron: '55 * * * *'
+
+jobs:
+
+  generate-data:
+    runs-on: ${{ matrix.config.os }}
+
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {os: ubuntu-latest,   r: 'release'}
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      RSPM: ${{ matrix.config.rspm }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+
+      - uses: actions/checkout@master
+      - uses: r-lib/actions/setup-r@v1
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          cache-version: 2
+          extra-packages: |
+            ggplot2
+            rcmdcheck
+            rmarkdown
+            tidyverse
+            pdftools
+            rvest
+            xml2
+            lubridate
+            scales
+            plotly
+            pracma
+            RColorBrewer
+            data.table
+            anytime
+            httr
+            readxl
+          
+      - uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.config.r }}
+          http-user-agent: ${{ matrix.config.http-user-agent }}
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          install.packages('sessioninfo')
+          #saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          #writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install dependencies
+        run: |
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+        
+      - name: Render Rmarkdown files
+        run: |
+          Rscript -e 'rmarkdown::render("ny_covid.Rmd")'
+          
+        #run: |
+        #  source("R/job.R")
+        #shell: Rscript {0} 
+        
+      - name: Commit files
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add ny_covid.html
+          git commit -am "wastewater data update"
+          git push 
+      - name: Session info
+        run: |
+          options(width = 100)
+          pkgs <- installed.packages()[, "Package"]
+          sessioninfo::session_info(pkgs, include_base = TRUE)
+        shell: Rscript {0}
