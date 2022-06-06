@@ -16,7 +16,7 @@ if(deploy == FALSE){
 #ggplotly(mass_hosps_plt)
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
 source("ma_wastewater.R")
 # x <- 1
 # print(x)
