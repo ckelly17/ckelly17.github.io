@@ -20,6 +20,7 @@ p_load(anytime)
 p_load(httr)
 p_load(readxl)
 p_load(xml2)
+p_load(rvest)
 
 pg <- read_html("https://www.mass.gov/info-details/covid-19-response-reporting")
 
