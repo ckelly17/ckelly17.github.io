@@ -17,14 +17,14 @@ if(deploy == FALSE){
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-#source("ma_wastewater.R")
+source("ma_wastewater.R")
 x <- 1
 print(x)
 ```
 Data sourced from https://www.mwra.com/biobot/biobotdata.htm
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-#fig
-#log_fig
-#ratio
+fig
+log_fig
+ratio
 ```
