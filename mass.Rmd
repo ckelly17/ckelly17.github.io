@@ -19,10 +19,10 @@ if(deploy == FALSE){
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #source("ma_wastewater.R")
 x <- 1
-
+print(x)
 ```
 Data sourced from https://www.mwra.com/biobot/biobotdata.htm
-print(x)
+
 
 <!-- Last MMWRA update: `r updated` -->
 
