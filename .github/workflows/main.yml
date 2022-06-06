@@ -10,7 +10,7 @@ on: [push]
 #         uses: happyRip/rmarkdown-action@v1.1
 #         with:
 #           input_file: mass.Rmd
-#           output_format: pdf_document
+#           output_format: html_document
           
 #on: [push]
   #schedule:
