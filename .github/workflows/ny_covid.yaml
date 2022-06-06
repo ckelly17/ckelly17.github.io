@@ -1,7 +1,7 @@
 name: NY COVID Update
 on: 
   schedule:
-    - cron: '28 * * * *'
+    - cron: '55 * * * *'
 
 jobs:
 
