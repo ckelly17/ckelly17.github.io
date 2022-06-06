@@ -1,5 +1,7 @@
 name: Render documents with rmarkdown-action
-on: [push]
+on: 
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
 
