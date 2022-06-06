@@ -6,9 +6,9 @@ if("pacman" %in% installed.packages()){
 }
 
 p_load(devtools)
-devtools::install_github("r-lib/xml2")
-system("sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev")
-print("command went through")
+#devtools::install_github("r-lib/xml2")
+#system("sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev")
+#print("command went through")
 
 p_load(pdftools)
 p_load(dplyr)
