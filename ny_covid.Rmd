@@ -1,0 +1,25 @@
+---
+title: "NYC and New York State COVID-19 Analysis"
+output: html_document
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
+deploy <- TRUE
+
+if(deploy == FALSE){
+  setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
+}
+source("nyc.R")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplotly(nyc_deaths_plt)
+ggplotly(nyc_ratio)
+ggplotly(nonlog)
+ggplotly(nyc_log)
+
+
+```
+
+The charts below display data collected by the Massachusetts Wastewater Resource Authority (MWRA) on levels of COVID-19 in Boston-area wastewater. For more information, see the [MWRA site](https://www.mwra.com/biobot/biobotdata.htm). 
+
