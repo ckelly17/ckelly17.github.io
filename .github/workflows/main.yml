@@ -32,6 +32,12 @@ jobs:
             rcmdcheck
             rmarkdown
             tidyverse
+            pdftools
+            rvest
+            xml2
+            lubridate
+            scales
+            plotly
           
       - uses: r-lib/actions/setup-r@master
         with:
