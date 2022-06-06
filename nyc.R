@@ -19,17 +19,17 @@ link_part1 <- "https://raw.githubusercontent.com/nychealth/coronavirus-data/"
 link_part2 <- "/trends/data-by-day.csv"
 link_part2d <- "/trends/deaths-by-day.csv"
 #
-nyc_links <- fread("/Users/conorkelly/Documents/COVID/nyc_github_links.csv") %>%
-  as_tibble()%>%
-
-  mutate(upload_date = anydate(paste0(upload_date, "-2021"))) %>%
-  mutate(commit = str_remove_all(commit_link, replace_text)) %>%
-  mutate(commit = str_replace(commit,"\\#.*","")) %>%
-  mutate(upload_wday = lubridate::wday(upload_date, label = TRUE)) %>%
-  mutate(data_link = ifelse(!is.na(commit), paste0(link_part1, commit, link_part2), NA)) %>%
-  mutate(death_data_link = ifelse(!is.na(commit), paste0(link_part1, commit, link_part2d), NA)) %>%
-  filter(!is.na(commit)) %>%
-  filter(commit != "")
+# nyc_links <- fread("/Users/conorkelly/Documents/COVID/nyc_github_links.csv") %>%
+#   as_tibble()%>%
+# 
+#   mutate(upload_date = anydate(paste0(upload_date, "-2021"))) %>%
+#   mutate(commit = str_remove_all(commit_link, replace_text)) %>%
+#   mutate(commit = str_replace(commit,"\\#.*","")) %>%
+#   mutate(upload_wday = lubridate::wday(upload_date, label = TRUE)) %>%
+#   mutate(data_link = ifelse(!is.na(commit), paste0(link_part1, commit, link_part2), NA)) %>%
+#   mutate(death_data_link = ifelse(!is.na(commit), paste0(link_part1, commit, link_part2d), NA)) %>%
+#   filter(!is.na(commit)) %>%
+#   filter(commit != "")
 # 
 # # load dataframe
 # hist_raw <- tibble()

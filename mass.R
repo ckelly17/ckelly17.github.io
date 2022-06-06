@@ -78,9 +78,6 @@ mass_case_plot <- mass_raw %>%
   scale_color_continuous(na.value = "transparent")
 
 mass_case_plot
-ggsave(paste0("/Users/conorkelly/Documents/COVID/mass/mass_log_", 
-              date, ".png"),
-       plot = mass_case_plot)
 ggplotly(mass_case_plot)
 
 # log 
