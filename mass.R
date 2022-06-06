@@ -19,6 +19,7 @@ p_load(tidymodels)
 p_load(anytime)
 p_load(httr)
 p_load(readxl)
+p_load(xml2)
 
 pg <- read_html("https://www.mass.gov/info-details/covid-19-response-reporting")
 
