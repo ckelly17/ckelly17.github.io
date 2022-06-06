@@ -46,6 +46,7 @@ jobs:
             anytime
             httr
             readxl
+            janitor
           
       - uses: r-lib/actions/setup-r@master
         with:
