@@ -17,7 +17,6 @@ p_load(data.table)
 p_load(janitor)
 p_load(tidymodels)
 p_load(anytime)
-p_load(ungeviz)
 p_load(httr)
 p_load(readxl)
 
