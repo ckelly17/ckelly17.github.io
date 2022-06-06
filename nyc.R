@@ -488,6 +488,11 @@ ny_deaths_plt <- ny_deaths %>%
 
 #ggplotly(ny_deaths_plt)
 
+cd_raw <- "https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD"
+cd_raw <- fread(cd_raw) %>%
+  as_tibble() %>%
+  clean_names()
+
 cdc_ny <- cd_raw %>%
   filter(state %in% c("NY", "NYC")) %>%
   select(submission_date, state, new_death, pnew_death) %>%
