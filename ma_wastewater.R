@@ -125,8 +125,8 @@ ww_log <- ww_plot +
 
 ww_plot
 ww_log
-fig <- ggplotly(ww_plot, width = 1000)
-log_fig <- ggplotly(ww_log, width = 1000)
+fig <- ggplotly(ww_plot, width = 800)
+log_fig <- ggplotly(ww_log, width = 800)
 
 ### week over week ratio
 ww_ratio_df <- ww_final %>%
@@ -136,9 +136,10 @@ ww_ratio_df <- ww_final %>%
 
 # plot
 ww_ratio <- ww_ratio_df %>%
-  filter(date >= max(date, na.rm = T) - 90) %>%
+  filter(date >= "2021-09-01") %>%
   ggplot() +
-  geom_point(aes(x = date, y = ratio, color = region), shape = 1, size = 0.5, show.legend = FALSE) +
+  geom_point(aes(x = date, y = ratio, color = region), shape = 1, size = 0.5, 
+             alpha = 0.3, show.legend = FALSE) +
   geom_line(aes(x = date, y = ratio7, color = region), size = 1, show.legend = FALSE) +
   geom_hline(aes(yintercept = 1), linetype = 'dashed', size = 0.9, color = 'black') +
   facet_wrap(~region) +
@@ -158,7 +159,7 @@ ww_ratio <- ww_ratio_df %>%
         strip.text = element_text(size = 12, face = "bold"))
 
 ww_ratio
-ratio <- ggplotly(ww_ratio, width = 1000)
+ratio <- ggplotly(ww_ratio, width = 800)
 
 # htmlwidgets::saveWidget(fig, "ww_fig.html")
 # htmlwidgets::saveWidget(log_fig, "ww_fig_log.html")

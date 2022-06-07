@@ -3,24 +3,22 @@ title: "NYC COVID-19 Analysis"
 output: html_document
 ---
 
-This page displays COVID-19 data from [NYC Health](https://www1.nyc.gov/site/doh/covid/covid-19-main.page). The case and death information presented here is generally by date of occurrence, rather than date of report. As such, data for a particular date gets filled in over time, rather than reported all at once. For cases, I display estimates of final case counts for dates where reporting is likely to still be incomplete. These estimates use the counts already reported for these dates, adjusted upwards based on how recent the date is, along with 95% confidence intervals.
-
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
-deploy <- TRUE
+deploy <- FALSE
 
 if(deploy == FALSE){
-  setwd("/Users/conorkelly/Documents/Heroku Apps/covid_Rmd")
+  setwd("/Users/conorkelly/Documents/ckelly17.github.io")
 }
 source("nyc.R")
 ```
-
+This page displays COVID-19 data from [NYC Health](https://www1.nyc.gov/site/doh/covid/covid-19-main.page). The case and death information presented here is generally by date of occurrence, rather than date of report. As such, data for a particular date gets filled in over time, rather than reported all at once. For cases, I display estimates of final case counts for dates where reporting is likely to still be incomplete. These estimates use the counts already reported for these dates, adjusted upwards based on how recent the date is, along with 95% confidence intervals. The most recent update includes data through ``r max(nyc$date, na.rm=T)``.
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(nyc_deaths_plt)
-ggplotly(nyc_ratio)
-ggplotly(nonlog)
-ggplotly(nyc_log)
-
+ggplotly(nonlog, width = 1000)
+ggplotly(nyc_log, width = 1000)
+ggplotly(nyc_ratio, width = 1000)
+ggplotly(nyc_deaths_plt, width = 1000)
+ggplotly(nyc_cfr_plt, width = 1000)
 
 ```
 
-
+Last updated: ``r as.character(now("America/New_York"))``

@@ -11,7 +11,7 @@ This page displays analysis of Massachusetts COVID-19 data from the Massachusett
 <br>
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
-deploy <- TRUE
+deploy <- FALSE
 
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/ckelly17.github.io")
@@ -24,21 +24,21 @@ The charts below display daily data compiled by MDPH on COVID-19 cases, hospital
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(mass_case_plot)
-ggplotly(ma_log)
-ggplotly(mass_ratio)
-ggplotly(ma_test_plt)
+ggplotly(mass_case_plot, width = 800)
+ggplotly(ma_log, width = 800)
+ggplotly(mass_ratio, width = 800)
+ggplotly(ma_test_plt, width = 800)
 
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(mass_hosps_plt)
+ggplotly(mass_hosps_plt, width = 800)
 
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplotly(mass_deaths_plot)
-ggplotly(mass_cfr_plot)
+ggplotly(mass_deaths_plot, width = 800)
+ggplotly(mass_cfr_plot, width = 800)
 
 ```
 ## Wastewater Analysis

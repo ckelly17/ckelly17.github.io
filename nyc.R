@@ -143,7 +143,7 @@ nyc_log <- nyc %>%
                      trans = "log2",
                      breaks = c(250, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000)) +
   theme_minimal() + 
-  labs(title = "NYC New Cases by Date of Diagnosis",
+  labs(title = "NYC New Cases by Date of Diagnosis (Log Scale)",
        subtitle = paste0("Daily values (circles) and 7-day average (line) on log scale from 2021-11-01 to ", max(nyc$date, na.rm = TRUE)),
        caption = 'Source: NYC Health. 
        
@@ -164,7 +164,8 @@ ggplotly(nyc_log)
 nonlog <- nyc_log +
   scale_y_continuous(labels = comma,
                      breaks = seq(0, 100000, 10000)) + 
-  labs(subtitle = paste0("Daily values (circles) and 7-day average (line) from 2021-11-01 to ", max(nyc$date, na.rm = TRUE)))
+  labs(title = "NYC New Cases by Date of Diagnosis (Log Scale)",
+       subtitle = paste0("Daily values (circles) and 7-day average (line) from 2021-11-01 to ", max(nyc$date, na.rm = TRUE)))
 nonlog
 ggplotly(nonlog)
 
@@ -199,7 +200,7 @@ nyc_ratio <- nyc %>%
   theme_minimal() +
   scale_fill_manual(values = c("white", "black")) +
   scale_y_continuous(limits = c(0, NA)) +
-  labs(title = paste0("NYC Week-Over-Week Case Ratios by Date of Diagnosis through ", max(nyc$date)),
+  labs(title = paste0("NYC Week-Over-Week Case Ratios by Date of Diagnosis"),
        subtitle = "Ratio of new cases to cases a week prior. Daily values (circles) and 7-day average (line) shown.",
        caption = 'Source: NYC Health GitHub.
        
@@ -277,7 +278,7 @@ nyc_deaths_plt <- nyc_deaths %>%
        y= "") +
   scale_color_manual(values = c("black", "gray")) +
   theme_minimal() +
-  theme(plot.title=element_text(face="bold", size = 15),
+  theme(plot.title=element_text(face="bold"),
         text = element_text(size = 10),
         plot.caption = element_text(hjust = 0),
         axis.text = element_text(size = 10, color = "black"))
@@ -403,115 +404,116 @@ nyc_deaths_plt
 # #ggplotly(cfr_vax)
 
 
-#############
-# HOSP
-#############
-
-# function for hospitalizations
-load_nyc <- function(){
-  url <- "https://health.data.ny.gov/api/views/jw46-jpb7/rows.csv?accessType=DOWNLOAD"
-  ny_hosps_raw <- fread(url) %>%
-    as_tibble() %>%
-    clean_names()
-  
-  nyc_hosp <- ny_hosps_raw %>%
-    mutate(weekday = lubridate::wday(mdy(as_of_date), label = TRUE, abbr = FALSE)) %>%
-    group_by(facility_name) %>%
-    arrange(mdy(as_of_date)) %>%
-    mutate(patients_currently_hospitalized = ifelse(is.na(patients_currently_hospitalized),
-                                                    lag(patients_currently_hospitalized),
-                                                    patients_currently_hospitalized),
-           patients_newly_admitted = ifelse(is.na(patients_newly_admitted),
-                                            lag(patients_newly_admitted),
-                                            patients_newly_admitted),
-           hosp_change = patients_currently_hospitalized - lag(patients_currently_hospitalized)) %>%
-    ungroup()
-  
-  return(nyc_hosp)
-}
-
-# load
-nyc_hosp <- load_nyc()
-
-# did it update?
-print(max(mdy(nyc_hosp$as_of_date), na.rm = TRUE))
-
-# write
-fwrite(nyc_hosp, "nyc_hosp.csv")
-
-############
-## NY CASES
-############
-url <- "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD"
-ny_cases_raw <- fread(url) %>%
-  as_tibble() %>%
-  clean_names() %>%
-  group_by(county) %>%
-  arrange(mdy(test_date)) %>%
-  mutate(new_tests = cumulative_number_of_tests_performed - lag(cumulative_number_of_tests_performed),
-         new_tests_7d = movavg(new_tests, 7),
-         new_pos_7d_avg = movavg(new_positives, 7))
-
-print(max(mdy(ny_cases_raw$test_date), na.rm = TRUE))
-
-# write
-fwrite(ny_cases_raw, "nyc_cases.csv")
-
-
-##########
-## DEATHS
-##########
-
-ny_deaths_link <- "https://health.data.ny.gov/api/views/xymy-pny5/rows.csv?accessType=DOWNLOAD"
-
-ny_deaths_raw <- fread(ny_deaths_link) %>%
-  clean_names() %>%
-  as_tibble()
-
-ny_deaths <- ny_deaths_raw %>%
-  mutate(date = mdy(report_date)) %>%
-  
-  group_by(county) %>%
-  arrange(date) %>%
-  mutate(new_deaths_county = deaths_by_county_of_residence - lag(deaths_by_county_of_residence),
-         deaths_county_7d = movavg(new_deaths_county, 7)) %>%
-  ungroup()
-
-ny_deaths_plt <- ny_deaths %>%
-  filter(county %in% "Statewide Total") %>%
-  filter(date >= "2021-09-01") %>%
-  
-  ggplot() +
-  
-  geom_col(aes(x = date, y = new_deaths_county), alpha = 0.3) +
-  geom_line(aes(x = date, y = deaths_county_7d))
-
-#ggplotly(ny_deaths_plt)
-
-cd_raw <- "https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD"
-cd_raw <- fread(cd_raw) %>%
-  as_tibble() %>%
-  clean_names()
-
-cdc_ny <- cd_raw %>%
-  filter(state %in% c("NY", "NYC")) %>%
-  select(submission_date, state, new_death, pnew_death) %>%
-  mutate(new_deaths_total = new_death) %>%
-  mutate(date = mdy(submission_date) - 1) %>%
-  group_by(state) %>%
-  arrange(date) %>%
-  mutate(new_death_7d_avg_cdc = movavg(new_deaths_total, 7)) %>%
-  ungroup() %>%
-  mutate(county = ifelse(state %in% "NY", "Albany", "Manhattan"))
-
-ny_deaths_comb <- ny_deaths %>%
-  left_join(cdc_ny, by = c("date", "county")) %>%
-  mutate(weekday = lubridate::wday(date, label =TRUE, abbr = FALSE))
-
-print(max(ny_deaths$date,na.rm = T))
-
-# write
-fwrite(ny_deaths_comb, "ny_deaths.csv")
+# #############
+# # HOSP
+# #############
+# 
+# # function for hospitalizations
+# load_nyc <- function(){
+#   url <- "https://health.data.ny.gov/api/views/jw46-jpb7/rows.csv?accessType=DOWNLOAD"
+#   ny_hosps_raw <- fread(url) %>%
+#     as_tibble() %>%
+#     clean_names()
+#   
+#   nyc_hosp <- ny_hosps_raw %>%
+#     mutate(weekday = lubridate::wday(mdy(as_of_date), label = TRUE, abbr = FALSE)) %>%
+#     group_by(facility_name) %>%
+#     arrange(mdy(as_of_date)) %>%
+#     mutate(patients_currently_hospitalized = ifelse(is.na(patients_currently_hospitalized),
+#                                                     lag(patients_currently_hospitalized),
+#                                                     patients_currently_hospitalized),
+#            patients_newly_admitted = ifelse(is.na(patients_newly_admitted),
+#                                             lag(patients_newly_admitted),
+#                                             patients_newly_admitted),
+#            hosp_change = patients_currently_hospitalized - lag(patients_currently_hospitalized)) %>%
+#     ungroup()
+#   
+#   return(nyc_hosp)
+# }
+# 
+# # load
+# nyc_hosp <- load_nyc()
+# 
+# # did it update?
+# print(max(mdy(nyc_hosp$as_of_date), na.rm = TRUE))
+# 
+# # write
+# fwrite(nyc_hosp, "nyc_hosp.csv")
+# 
+# ############
+# ## NY CASES
+# ############
+# url <- "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD"
+# ny_cases_raw <- fread(url) %>%
+#   as_tibble() %>%
+#   clean_names() %>%
+#   group_by(county) %>%
+#   arrange(mdy(test_date)) %>%
+#   mutate(new_tests = cumulative_number_of_tests_performed - lag(cumulative_number_of_tests_performed),
+#          new_tests_7d = movavg(new_tests, 7),
+#          new_pos_7d_avg = movavg(new_positives, 7))
+# 
+# print(max(mdy(ny_cases_raw$test_date), na.rm = TRUE))
+# 
+# # write
+# fwrite(ny_cases_raw, "nyc_cases.csv")
+# 
+# 
+# ##########
+# ## DEATHS
+# ##########
+# 
+# ny_deaths_link <- "https://health.data.ny.gov/api/views/xymy-pny5/rows.csv?accessType=DOWNLOAD"
+# 
+# ny_deaths_raw <- fread(ny_deaths_link) %>%
+#   clean_names() %>%
+#   as_tibble()
+# 
+# ny_deaths <- ny_deaths_raw %>%
+#   mutate(date = mdy(report_date)) %>%
+#   
+#   group_by(county) %>%
+#   arrange(date) %>%
+#   mutate(new_deaths_county = deaths_by_county_of_residence - lag(deaths_by_county_of_residence),
+#          deaths_county_7d = movavg(new_deaths_county, 7)) %>%
+#   ungroup()
+# 
+# ny_deaths_plt <- ny_deaths %>%
+#   filter(county %in% "Statewide Total") %>%
+#   filter(date >= "2021-09-01") %>%
+#   
+#   ggplot() +
+#   
+#   geom_col(aes(x = date, y = new_deaths_county), alpha = 0.3) +
+#   geom_line(aes(x = date, y = deaths_county_7d)) +
+#   theme(plot.title=element_text(face="bold", size = 15))
+# 
+# #ggplotly(ny_deaths_plt)
+# 
+# cd_raw <- "https://data.cdc.gov/api/views/9mfq-cb36/rows.csv?accessType=DOWNLOAD"
+# cd_raw <- fread(cd_raw) %>%
+#   as_tibble() %>%
+#   clean_names()
+# 
+# cdc_ny <- cd_raw %>%
+#   filter(state %in% c("NY", "NYC")) %>%
+#   select(submission_date, state, new_death, pnew_death) %>%
+#   mutate(new_deaths_total = new_death) %>%
+#   mutate(date = mdy(submission_date) - 1) %>%
+#   group_by(state) %>%
+#   arrange(date) %>%
+#   mutate(new_death_7d_avg_cdc = movavg(new_deaths_total, 7)) %>%
+#   ungroup() %>%
+#   mutate(county = ifelse(state %in% "NY", "Albany", "Manhattan"))
+# 
+# ny_deaths_comb <- ny_deaths %>%
+#   left_join(cdc_ny, by = c("date", "county")) %>%
+#   mutate(weekday = lubridate::wday(date, label =TRUE, abbr = FALSE))
+# 
+# print(max(ny_deaths$date,na.rm = T))
+# 
+# # write
+# fwrite(ny_deaths_comb, "ny_deaths.csv")
 
 
 
