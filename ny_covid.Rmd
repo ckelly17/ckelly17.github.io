@@ -1,7 +1,9 @@
 ---
-title: "NYC and New York State COVID-19 Analysis"
+title: "NYC COVID-19 Analysis"
 output: html_document
 ---
+
+This page displays COVID-19 data from [NYC Health](https://www1.nyc.gov/site/doh/covid/covid-19-main.page). The case and death information presented here is generally by date of occurrence, rather than date of report. As such, data for a particular date gets filled in over time, rather than reported all at once. For cases, I display estimates of final case counts for dates where reporting is likely to still be incomplete. These estimates use the counts already reported for these dates, adjusted upwards based on how recent the date is, along with 95% confidence intervals.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
 deploy <- TRUE
@@ -21,5 +23,4 @@ ggplotly(nyc_log)
 
 ```
 
-The charts below display data collected by the Massachusetts Wastewater Resource Authority (MWRA) on levels of COVID-19 in Boston-area wastewater. For more information, see the [MWRA site](https://www.mwra.com/biobot/biobotdata.htm). 
 
