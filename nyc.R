@@ -286,7 +286,6 @@ nyc_deaths_plt <- nyc_deaths %>%
 ggplotly(nyc_deaths_plt)
 nyc_deaths_plt
 
-
 # ####################
 # # BREAKTHROUGHS
 # ####################
