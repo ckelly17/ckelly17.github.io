@@ -1,7 +1,7 @@
 name: NY COVID Update
 on: 
   schedule:
-    - cron: '55 * * * *'
+    - cron: '33 13 * * *'
 
 jobs:
 
@@ -88,7 +88,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add ny_covid.html
-          git commit -am "wastewater data update"
+          git commit -am "new york data update"
           git push 
       - name: Session info
         run: |
