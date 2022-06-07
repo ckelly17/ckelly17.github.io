@@ -164,7 +164,7 @@ ggplotly(nyc_log)
 nonlog <- nyc_log +
   scale_y_continuous(labels = comma,
                      breaks = seq(0, 100000, 10000)) + 
-  labs(title = "NYC New Cases by Date of Diagnosis (Log Scale)",
+  labs(title = "NYC New Cases by Date of Diagnosis",
        subtitle = paste0("Daily values (circles) and 7-day average (line) from 2021-11-01 to ", max(nyc$date, na.rm = TRUE)))
 nonlog
 ggplotly(nonlog)
@@ -238,7 +238,7 @@ nyc_deaths <- nyc_deaths_raw %>%
          ratio18 = death_count_all / lag(PredictedCases, 18))
 
 nyc_cfr_plt <- nyc_deaths %>%
-  filter(date >= "2021-11-01") %>%
+  filter(date >= "2021-07-01") %>%
   mutate(Status = ifelse(date >= max(date, na.rm = TRUE) - 7, "P", "C"),
          cfr18 = ifelse(Status %in% "P", NA, cfr18)) %>%
   
@@ -250,7 +250,7 @@ nyc_cfr_plt <- nyc_deaths %>%
   scale_color_manual(values = c("black", "gray")) +
   scale_y_continuous(limits = c(0, .015),
                      labels = percent_format()) +
-  labs(title = paste0("NYC CFR estimates (data through ", max(nyc$date), ")"),
+  labs(title = paste0("NYC CFR estimate with 18-day lag"),
        subtitle = "18 day lag",
        caption = 'Source: NYC Health GitHub',
        x = "",
@@ -263,7 +263,7 @@ ggplotly(nyc_cfr_plt)
 nyc_cfr_plt
 
 nyc_deaths_plt <- nyc_deaths %>%
-  filter(date >= "2021-11-01") %>%
+  filter(date >= "2021-07-01") %>%
   mutate(Status = ifelse(date >= max(date, na.rm = TRUE) - 4, "P", "C")) %>%
   #mutate(all_death_count_7day_avg = ifelse(Status %in% "P", NA, all_death_count_7day_avg)) %>%
   mutate(all_death_count_7day_avg_no_prov = ifelse(Status %in% "P", NA, all_death_count_7day_avg)) %>%
