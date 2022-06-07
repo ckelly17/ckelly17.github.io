@@ -11,7 +11,7 @@ This page displays analysis of Massachusetts COVID-19 data from the Massachusett
 <br>
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
-deploy <- FALSE
+deploy <- TRUE
 
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/ckelly17.github.io")

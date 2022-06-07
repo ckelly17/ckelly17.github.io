@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
-deploy <- FALSE
+deploy <- TRUE
 
 if(deploy == FALSE){
   setwd("/Users/conorkelly/Documents/ckelly17.github.io")
