@@ -1,0 +1,26 @@
+name: COVID Google Trends
+on: 
+  schedule:
+    - cron: '55 18 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.7.4', '3.8', '3.9', '3.10']
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - run: pip install -r requirements.txt
+    - run: python scripts/google_trends_covid/google_trends_covid.py
+    
+    - name: Commit files
+            run: |
+              git config --local user.email "actions@github.com"
+              git config --local user.name "GitHub Actions"
+              git add google_trends_covid.html
+              git commit -am "google trends update"
+              git push 
