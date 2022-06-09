@@ -1,19 +1,16 @@
 name: COVID Google Trends
 on: 
   schedule:
-    - cron: '30 16 * * *'
-
+    - cron: '20 17 * * *'
+    
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ['3.7.4', '3.8', '3.9', '3.10']
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.9'
         cache: 'pip'
     - run: pip install -r scripts/google_trends_covid/requirements.txt
     - run: python scripts/google_trends_covid/google_trends_covid.py
