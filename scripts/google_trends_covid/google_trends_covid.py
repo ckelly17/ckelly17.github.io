@@ -3,6 +3,7 @@ import pytrends
 from pytrends.request import TrendReq
 import plotly.express as px
 import plotly.graph_objects as go
+import io
 
 pytrends = TrendReq(hl='en-US', tz=360)
 kw_list = ["covid test"]
@@ -82,7 +83,33 @@ fig.update_layout(
     plot_bgcolor='rgba(0,0,0,0)'
 )
 
+line_html = fig_line.to_html(full_html=False, include_plotlyjs='cdn')
+map_html = fig.to_html(full_html=False, include_plotlyjs='cdn')
 
-with open('google_trends_covid.html', 'a') as f:
-    f.write(fig_line.to_html(full_html=False, include_plotlyjs='cdn'))
-    f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
+
+#with open('boilerplate.txt', 'r') as file:
+with open('google_trends_covid.html', 'r+') as f:
+    # read a list of lines into data
+    data = f.readlines()
+    print(len(data))
+
+# if len(data) == 4000:
+#     with open('google_trends_covid.html', 'a') as f:
+#         f.write(fig_line.to_html(full_html=False, include_plotlyjs='cdn'))
+#         f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
+#         print('writing the old way')
+if len(data) >= 348:
+    with open('google_trends_covid.html', 'r') as f:
+        data = f.readlines()
+        data[-2] = line_html
+        data[-1] = map_html
+
+    with open('google_trends_covid.html', 'w') as f:
+        for line in data:
+            f.write(line)
+        print('writing the new way')
+
+print(len(data))
+
+
+
