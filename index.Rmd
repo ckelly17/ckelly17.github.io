@@ -7,6 +7,6 @@ title: "Hello!"
 </center>
 <br>
 
-<p style="text-align:center;"><img src="me.png" style ="width:60%" alt="Logo"></p>
+<p style="text-align:center;"><img src="images/me.png" style ="width:60%" alt="Logo"></p>
 
 

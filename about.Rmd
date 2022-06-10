@@ -12,7 +12,7 @@ Prior to Deloitte, I spent the first seven years of my career at [Hanover Resear
 
 I enjoy managing teams, but I also like being close to the action; data analysis is a passion of mine, and it's not just something I do for work. In the last year, for example, I've volunteered with The [COVID Tracking Project](https://covidtracking.com/) as a data analyst and have maintained a daily dashboard on COVID-19 data since May 2020. I work in R primarily but also have significant work experience working in Python and Spark (Databricks and PySpark). I also love making visualizations in Tableau. Check out my work using the tabs above!
 
-<img style="float: center; padding-left: 10px; width:66%" src="traj.png"/>
+<img style="float: center; padding-left: 10px; width:66%" src="images/traj.png"/>
 <br>
 <br>
 <br>
