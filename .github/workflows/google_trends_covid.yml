@@ -1,7 +1,7 @@
 name: COVID Google Trends
 on: 
   schedule:
-    - cron: '51 17 * * *'
+    - cron: '40 1 * * *'
     
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
       with:
         python-version: '3.9'
         cache: 'pip'
-    - run: pip install -r requirements.txt
+    - run: pip install pandas pytrends plotly io
     - run: python scripts/google_trends_covid/google_trends_covid.py
     
     - name: Commit files
