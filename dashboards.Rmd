@@ -29,6 +29,8 @@ This dashboard uses data from the Department of Health and Human Services, and t
 <br>
 <br>
 <br>
+<br>
+
 
 ### COVID-19 Vaccine Distribution
 This dashboard presents data from the [CDC]() on vaccine distribution and administration in the United States, with the aim of tracking the US' ramp-up of vaccination capacity.Click [here](vaccine_dashboard.html) to view the dashboard. 
@@ -45,9 +47,8 @@ This dashboard presents data from the [CDC]() on vaccine distribution and admini
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+
+
 
 ### Additional COVID-19 analytics
 These are analyses I have created that are now automatically updated on a regular basis.
@@ -58,7 +59,7 @@ These are analyses I have created that are now automatically updated on a regula
 * [Google Trends](google_trends_covid.html)
 * [Omicron Variant: South Africa COVID-19 Analytics](south_africa_report.html) (no longer updating)
 
-
+<br>
 
 <!-- ### Omicron Variant: South Africa Charts -->
 <!-- This page presents data for South Africa to track the trajectory of the Omicron variant. Click [here](south_africa_report.html) to view the site.  -->
