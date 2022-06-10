@@ -50,10 +50,14 @@ This dashboard presents data from the [CDC]() on vaccine distribution and admini
 <br>
 
 ### Additional COVID-19 analytics
+These are analyses I have created that are now automatically updated on a regular basis.
 
-* [Massachusetts COVID-19 Analysis](mass.html)
-* [Omicron Variant: South Africa COVID-19 Analytics](south_africa_report.html)
 * [CDC Excess Deaths Dashboard](excess_deaths_dashboard.html)
+* [New York City COVID-19 Analysis](ny_covid.html)
+* [Massachusetts COVID-19 Analysis](mass.html)
+* [Google Trends](google_trends_covid.html)
+* [Omicron Variant: South Africa COVID-19 Analytics](south_africa_report.html) (no longer updating)
+
 
 
 <!-- ### Omicron Variant: South Africa Charts -->
