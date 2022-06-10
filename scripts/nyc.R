@@ -81,7 +81,7 @@ link_part2d <- "/trends/deaths-by-day.csv"
 #   mutate(days_from_complete = ifelse(gap > 12, 0, 12 - gap))
 #
 # write_csv(avg_gap, "nyc_gaps.csv")
-avg_gap <- read_csv("nyc_gaps.csv")
+avg_gap <- read_csv("scripts/nyc_gaps.csv")
 
 # function
 clean_nyc <- function(url){
