@@ -47,6 +47,7 @@ jobs:
             httr
             readxl
             janitor
+            rlang
           
       - uses: r-lib/actions/setup-r@master
         with:
