@@ -31,6 +31,7 @@ jobs:
           cache-version: 2
           extra-packages: |
             ggplot2
+            devtools
             rcmdcheck
             rmarkdown
             tidyverse
