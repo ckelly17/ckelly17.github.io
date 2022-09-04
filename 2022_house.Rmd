@@ -7,5 +7,5 @@ output:
 This dashboard uses data from [FiveThirtyEight](https://projects.fivethirtyeight.com/2022-election-forecast/) and [Cook Political Report](https://www.cookpolitical.com/cook-pvi/2022-partisan-voting-index/district-map-and-list) to visualize FiveThirtyEight's projections for the 2022 midterm elections for Congress. 
 
 <iframe src="https://public.tableau.com/views/house_16621900910770/SEATS?:showVizHome=no&:embed=true&:highdpi=false&:render=false" align = "left" scrolling="no"
- width="1200" height="690"></iframe>
+ width="1075" height="690"></iframe>
  
