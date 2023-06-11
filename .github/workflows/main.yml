@@ -1,7 +1,4 @@
 name: Boston wastewater update
-on: 
-  schedule:
-    - cron: '35 21 * * *'
 
 jobs:
 
