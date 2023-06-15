@@ -11,7 +11,7 @@ navbar:
     - text: "dashboards"
       href: dashboards.html
     - text: "resume"
-      href: resume2.html
+      href: resume.pdf
 
   right:
     - icon: fa-envelope
