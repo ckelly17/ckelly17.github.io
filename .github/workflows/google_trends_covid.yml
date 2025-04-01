@@ -1,7 +1,4 @@
 name: COVID Google Trends
-on: 
-  schedule:
-    - cron: '50 3 * * *'
     
 jobs:
   build:
